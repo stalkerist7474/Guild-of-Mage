@@ -126,7 +126,7 @@ public class Player : MonoBehaviour
         _currentSpell = spell;
     }
 
-
+    //получение урона от врагов
     public void ApplyDamage(int damage)
     {
         _currentHeath -= damage;
@@ -134,7 +134,7 @@ public class Player : MonoBehaviour
 
         if (_currentHeath <= 0)
         {
-
+            Debug.Log("Ты умер");
             Destroy(gameObject);
         }
     }
