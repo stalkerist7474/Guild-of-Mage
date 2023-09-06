@@ -503,7 +503,11 @@ MonoBehaviour:
   - Template: {fileID: 5972620518736468179, guid: 9d3b60958b755a342b80db08ae2af167,
       type: 3}
     Delay: 2
-    Count: 10
+    Count: 2
+  - Template: {fileID: 5457254986435953064, guid: 7cc2d18d2adc2544fa7aa7e45f4e3a42,
+      type: 3}
+    Delay: 2
+    Count: 2
   _spawnPoint: {fileID: 465924724}
   _player: {fileID: 1118867847}
 --- !u!1 &114161397
