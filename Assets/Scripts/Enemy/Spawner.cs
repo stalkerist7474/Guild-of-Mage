@@ -13,8 +13,11 @@ public class Spawner : MonoBehaviour
     private int _currentWaveNumber = 0;
     private float _timeAfterLastSpawn;
     private float _timeAfterLastWaveDone;
+    private float _timeNextWaveDelay;
     private int _spawned;
     private int _enemyCount;
+    private bool _waveComplete;
+    private bool _waveAllEnemySpawned;
 
     public event UnityAction AllEnemySpawned;
     public event UnityAction AllEnemyDieCurrentWave;
@@ -22,9 +25,24 @@ public class Spawner : MonoBehaviour
 
     public event UnityAction<int, int> EnemyCountChanged;
 
+
+    private void OnEnable()
+    {
+        AllEnemySpawned += OnAllEnemySpawned;
+    }
+
+
+    private void OnDisable()
+    {
+        AllEnemySpawned -= OnAllEnemySpawned;
+    }
+
+
     private void Start()
     {
         SetWave(_currentWaveNumber);
+        _waveComplete = false;
+        _waveAllEnemySpawned = false;
     }
 
     private void Update()
@@ -36,15 +54,32 @@ public class Spawner : MonoBehaviour
         if (_currentWave == null)
             return;
 
+        // Условие если все цели заспавнены и все они убиты
+        if (_waveAllEnemySpawned == true)
+        {
+            if (_waveComplete == true)
+            {
+                Debug.Log("End wave2");
+                            
+                if (_timeAfterLastWaveDone >= _timeNextWaveDelay)
+                {
+                    NextWave();
+                }
+            }
+
+        }
         //проверка для спавна монстра по времени задержки спавна
         if(_timeAfterLastSpawn >= _currentWave.Delay)
         {
+            
             InstantiateEnemy();
             _spawned++;
             _enemyCount++;
             _timeAfterLastSpawn = 0;
             EnemyCountChanged?.Invoke(_spawned, _currentWave.Count);
         }
+        
+
 
         //проверка все ли монстры заспавнены
         if(_currentWave.Count <= _spawned)
@@ -52,24 +87,11 @@ public class Spawner : MonoBehaviour
             //и если число волн на уровень больше числа текущей волны 
             if (_waves.Count > _currentWaveNumber + 1)
                 AllEnemySpawned?.Invoke();
-            
-                
-                
+             
             _currentWave = null;
         }
 
-        //если все монстры заспавнены и число монстров оставшихся на карте равно 0
-        if(_spawned == _currentWave.Count && _enemyCount <= 0)
-        {
-            Debug.Log("End wave");
-            _enemyCount = 0;
-            _timeAfterLastWaveDone = 0;
-            if (_timeAfterLastWaveDone >= _currentWave.DelayWave)
-            {
-                NextWave();
-            }
 
-        }
         
     }
     // Спавн врагов
@@ -85,15 +107,18 @@ public class Spawner : MonoBehaviour
     {
         _currentWave = _waves[index];
         EnemyCountChanged?.Invoke(0, 1);
+        _timeNextWaveDelay = _currentWave.DelayWave;    //присвоение время задержки след волны
 
     }
 
     //установка следующей волны
     public void NextWave()
     {
+        _spawned = 0;
+        _waveAllEnemySpawned = false;
+        _waveComplete = false;  
         _currentWaveNumber++;
         SetWave(_currentWaveNumber);
-        _spawned = 0;
     }
 
     //враг убит
@@ -103,7 +128,23 @@ public class Spawner : MonoBehaviour
         _enemyCount--;
         _player.AddMoney(enemy.RewardGold);
         _player.AddExp(enemy.RewardExp);
+        Debug.Log($"_enemyCount222={_enemyCount}");
+        if (_enemyCount == 0)
+        {
+            _timeAfterLastWaveDone = 0;
+            _waveComplete = true;
+        }
     }
+
+    //все враги заспавнены
+    public void OnAllEnemySpawned()
+    {
+        _waveAllEnemySpawned = true;
+
+    }
+
+
+
 
 }
 
