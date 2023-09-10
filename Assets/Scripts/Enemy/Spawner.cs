@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,6 +17,7 @@ public class Spawner : MonoBehaviour
     private float _timeNextWaveDelay;
     private int _spawned;
     private int _enemyCount;
+    private int _numWaveOnThisLevel;
     private bool _waveComplete;
     private bool _waveAllEnemySpawned;
 
@@ -40,6 +42,8 @@ public class Spawner : MonoBehaviour
 
     private void Start()
     {
+        _numWaveOnThisLevel = _waves.Count;
+        Debug.Log($"_waves.Count{_waves.Count}");
         SetWave(_currentWaveNumber);
         _waveComplete = false;
         _waveAllEnemySpawned = false;
@@ -87,8 +91,10 @@ public class Spawner : MonoBehaviour
             //и если число волн на уровень больше числа текущей волны 
             if (_waves.Count > _currentWaveNumber + 1)
                 AllEnemySpawned?.Invoke();
-             
+                
+
             _currentWave = null;
+         
         }
 
 
@@ -133,6 +139,12 @@ public class Spawner : MonoBehaviour
         {
             _timeAfterLastWaveDone = 0;
             _waveComplete = true;
+            _numWaveOnThisLevel--;
+                if (_numWaveOnThisLevel == 0)
+                {
+                    Win();
+                }
+
         }
     }
 
@@ -143,6 +155,11 @@ public class Spawner : MonoBehaviour
 
     }
 
+    //Когда победил
+    private void Win()
+    {
+        Debug.Log($"WINNER");
+    }
 
 
 
