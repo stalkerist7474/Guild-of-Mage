@@ -165,7 +165,14 @@ public class Player : MonoBehaviour
 
     }
 
-   
+    public void ClearMoney()
+    {
+        Money = 0;
+        MoneyOrExpChanged?.Invoke(Money);
+
+    }
+
+
 
 
     public void UnlockSpell(Spell spell)

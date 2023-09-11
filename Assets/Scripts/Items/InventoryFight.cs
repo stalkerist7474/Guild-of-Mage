@@ -63,7 +63,8 @@ public class InventoryFight : MonoBehaviour
     public void TrasportItemEquipmentToBase(ItemEquipment item)
     {
         InventoryBase.instance.AddItemEquipment(item);
-        Debug.Log("TrasportItemEquipmentToBase");
+        RemoveItemEquipment(item);
+        
 
     }
 
@@ -74,7 +75,7 @@ public class InventoryFight : MonoBehaviour
         for (int i = 0; i < ItemEquipmentFight.Count; i++)
         {
             TrasportItemEquipmentToBase(ItemEquipmentFight[i]);
-            Debug.Log("TrasportAllItemEquipmentToBase");
+            
         }
         
     }
@@ -83,7 +84,8 @@ public class InventoryFight : MonoBehaviour
     public void TrasportItemResToBase(ItemRes item)
     {
         InventoryBase.instance.AddItemRes(item);
-        Debug.Log("TrasportItemResToBase");
+        RemoveItemRes(item);
+        
 
 
     }
@@ -95,16 +97,23 @@ public class InventoryFight : MonoBehaviour
         for (int i = 0; i < ItemResFight.Count; i++)
         {
             TrasportItemResToBase(ItemResFight[i]);
-            Debug.Log("TrasportAllItemResToBase");
+            
         }
 
     }
 
     // перевод денег уровня на базу
-    public void TrasportBalance(int money)
+    public void TrasportBalanceForWin()
     {
-
+        InventoryBase.instance.AddMoneyBase(_player.Money);
+        _player.ClearMoney();
         
+    }
+
+    public void TrasportBalanceForGameOver()
+    {
+        InventoryBase.instance.AddMoneyBase(_player.Money / 2);
+        _player.ClearMoney();
 
     }
 

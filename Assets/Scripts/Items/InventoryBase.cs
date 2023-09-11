@@ -14,9 +14,15 @@ public class InventoryBase : MonoBehaviour
     public List<ItemRes> ItemResBase = new List<ItemRes>();
     public int BalanceBase;
 
+    private void Awake()
+    {
+        instance = this;
+        
+        
+    }
+
     private void Start()
     {
-        
     }
 
 
@@ -43,5 +49,17 @@ public class InventoryBase : MonoBehaviour
     public void RemoveItemRes(ItemRes item)
     {
         ItemResBase.Remove(item);
+    }
+
+
+
+    public void AddMoneyBase(int money)
+    {
+        BalanceBase = BalanceBase + money;
+    }
+
+    public void RemoveMoneyBase(int money)
+    {
+        BalanceBase = BalanceBase - money;
     }
 }
