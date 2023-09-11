@@ -7,8 +7,6 @@ using UnityEngine.Events;
 public class Spawner : MonoBehaviour
 {
 
-    // выход волны работает только в дебаг моде 
-
     [SerializeField] private List<Wave> _waves;
     [SerializeField] private Transform _spawnPoint;
     [SerializeField] private Player _player;
@@ -46,7 +44,7 @@ public class Spawner : MonoBehaviour
     private void Start()
     {
         _numWaveOnThisLevel = _waves.Count;
-        Debug.Log($"_waves.Count{_waves.Count}");
+        //Debug.Log($"_waves.Count{_waves.Count}");
         SetWave(_currentWaveNumber);
         _waveComplete = false;
         _waveAllEnemySpawned = false;
@@ -57,26 +55,29 @@ public class Spawner : MonoBehaviour
         _timeAfterLastSpawn += Time.deltaTime;
         _timeAfterLastWaveDone += Time.deltaTime;
 
-        Debug.Log($"_timeAfterLastWaveDone{_timeAfterLastWaveDone}");
-
-        //проверка есть ли еще волны
-        if (_currentWave == null)
-            return;
+       // Debug.Log($"_timeAfterLastWaveDone{_timeAfterLastWaveDone}");
+       // Debug.Log($"_waveAllEnemySpawned={_waveAllEnemySpawned}/ _waveComplete={_waveComplete}");
 
         // Условие если все цели заспавнены и все они убиты
         if (_waveAllEnemySpawned == true)
         {
+           // Debug.Log("End wave1");
             if (_waveComplete == true)
             {
-                Debug.Log("End wave2");
+               // Debug.Log("End wave2");
                             
                 if (_timeAfterLastWaveDone >= _timeNextWaveDelay)
                 {
                     NextWave();
+                   // Debug.Log("End wave3");
                 }
             }
 
         }
+        //проверка есть ли еще волны
+        if (_currentWave == null)
+            return;
+
         //проверка для спавна монстра по времени задержки спавна
         if(_timeAfterLastSpawn >= _currentWave.Delay)
         {
@@ -139,7 +140,7 @@ public class Spawner : MonoBehaviour
         _enemyCount--;
         _player.AddMoney(enemy.RewardGold);
         _player.AddExp(enemy.RewardExp);
-        Debug.Log($"_enemyCount222={_enemyCount}");
+        //Debug.Log($"_enemyCount222={_enemyCount}");
         if (_enemyCount == 0)
         {
             _timeAfterLastWaveDone = 0;
