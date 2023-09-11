@@ -6,6 +6,9 @@ using UnityEngine.Events;
 
 public class Spawner : MonoBehaviour
 {
+
+    // выход волны работает только в дебаг моде 
+
     [SerializeField] private List<Wave> _waves;
     [SerializeField] private Transform _spawnPoint;
     [SerializeField] private Player _player;
@@ -53,6 +56,8 @@ public class Spawner : MonoBehaviour
     {
         _timeAfterLastSpawn += Time.deltaTime;
         _timeAfterLastWaveDone += Time.deltaTime;
+
+        Debug.Log($"_timeAfterLastWaveDone{_timeAfterLastWaveDone}");
 
         //проверка есть ли еще волны
         if (_currentWave == null)
@@ -149,7 +154,7 @@ public class Spawner : MonoBehaviour
     }
 
     //все враги заспавнены
-    public void OnAllEnemySpawned()
+    private void OnAllEnemySpawned()
     {
         _waveAllEnemySpawned = true;
 
