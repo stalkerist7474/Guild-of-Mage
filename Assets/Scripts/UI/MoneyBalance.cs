@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -11,17 +12,20 @@ public class MoneyBalance : MonoBehaviour
     private void OnEnable()
     {
         _money.text = _player.Money.ToString();
-        _player.MoneyOrExpChanged += OnMoneyChaged;
+        _player.MoneyChanged += OnMoneyChaged;
     }
 
     private void OnDisable()
     {
-        _player.MoneyOrExpChanged -= OnMoneyChaged;
+        _player.MoneyChanged -= OnMoneyChaged;
     }
 
     private void OnMoneyChaged(int money)
     {
-        _money.text = money.ToString();
+       
+        _money.text = Convert.ToString(money);
+        
+        
     }
    
 

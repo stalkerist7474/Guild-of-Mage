@@ -21,7 +21,8 @@ public class Player : MonoBehaviour
     private Spell _currentSpell;
 
     public event UnityAction<int, int> HealthChanged;
-    public event UnityAction<int> MoneyOrExpChanged;
+    public event UnityAction<int> MoneyChanged;
+    public event UnityAction<int> ExpChanged;
     public event UnityAction<int> CountPerksChanged;
 
 
@@ -148,18 +149,18 @@ public class Player : MonoBehaviour
     public void AddMoney(int money)
     {
         Money += money;
-        MoneyOrExpChanged?.Invoke(Money);
+        MoneyChanged?.Invoke(Money);
 
     }
     public void AddExp(int exp)
     {
         Exp += exp;
-        MoneyOrExpChanged?.Invoke(Exp);
+        ExpChanged?.Invoke(Exp);
         if (Exp == 10)
         {
             Exp = 0;
             CountPerks++;
-            MoneyOrExpChanged?.Invoke(Exp);
+            ExpChanged?.Invoke(Exp);
             CountPerksChanged?.Invoke(CountPerks);
         }
 
@@ -168,7 +169,7 @@ public class Player : MonoBehaviour
     public void ClearMoney()
     {
         Money = 0;
-        MoneyOrExpChanged?.Invoke(Money);
+        MoneyChanged?.Invoke(Money);
 
     }
 
