@@ -6,6 +6,8 @@ using UnityEngine.Events;
 
 public class Spawner : MonoBehaviour
 {
+    public static Spawner instance;
+    //public WinLevel winLevel;
 
     [SerializeField] private List<Wave> _waves;
     [SerializeField] private Transform _spawnPoint;
@@ -23,8 +25,11 @@ public class Spawner : MonoBehaviour
     private bool _waveAllEnemySpawned;
 
     public event UnityAction AllEnemySpawned;
-    public event UnityAction AllEnemyDieCurrentWave;
-    public event UnityAction AllWaveEnd;
+    public event UnityAction OnAllEnemyDieCurrentWave;
+    public event UnityAction OnAllWaveEnd;
+
+    public static event UnityAction OnLevelWin;
+    public event UnityAction OnLevelGameOver;
 
     public event UnityAction<int, int> EnemyCountChanged;
 
@@ -32,17 +37,20 @@ public class Spawner : MonoBehaviour
     private void OnEnable()
     {
         AllEnemySpawned += OnAllEnemySpawned;
+        //OnLevelWin += winLevel.OnWin;
     }
 
 
     private void OnDisable()
     {
         AllEnemySpawned -= OnAllEnemySpawned;
+        //OnLevelWin += winLevel.OnWin;
     }
 
 
     private void Start()
     {
+        
         _numWaveOnThisLevel = _waves.Count;
         //Debug.Log($"_waves.Count{_waves.Count}");
         SetWave(_currentWaveNumber);
@@ -162,9 +170,11 @@ public class Spawner : MonoBehaviour
     }
 
     //Когда победил
-    private void Win()
+    public void Win()
     {
-        Debug.Log($"WINNER");
+        Debug.Log($"WINNER1");
+        OnLevelWin?.Invoke();
+        Debug.Log($"WINNER2");
     }
 
 

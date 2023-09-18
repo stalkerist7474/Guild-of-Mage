@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
     public event UnityAction<int> MoneyChanged;
     public event UnityAction<int> ExpChanged;
     public event UnityAction<int> CountPerksChanged;
+    public static event UnityAction OnLevelGameOver;
 
 
     public int Money { get; private set; }
@@ -136,7 +137,8 @@ public class Player : MonoBehaviour
         if (_currentHeath <= 0)
         {
             Debug.Log("Ты умер");
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            OnLevelGameOver?.Invoke();
         }
     }
 
