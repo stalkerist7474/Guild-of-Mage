@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Menu : MonoBehaviour
 {
-    public void OpenPanel(GameObject panel)
+    public void OpenPanel(CanvasGroup panel)
     {
-        panel.SetActive(true);
+        panel.alpha = 1.0f;
         Time.timeScale = 0;
     }
 
-    public void ClosePanel(GameObject panel)
+    public void ClosePanel(CanvasGroup panel)
     {
-        panel.SetActive(false);
+        panel.alpha = 0.0f;
         Time.timeScale = 1;
     }
 
