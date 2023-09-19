@@ -16,13 +16,15 @@ public class Player : MonoBehaviour
     [SerializeField] private float _areaAttack;
     [SerializeField] private GameObject _currentEnemyToAttack;
 
+    [SerializeField] public int _needExpForUp = 10;
+    
     private int _currentHeath;
     private Animator _animation;
     private Spell _currentSpell;
 
     public event UnityAction<int, int> HealthChanged;
     public event UnityAction<int> MoneyChanged;
-    public event UnityAction<int> ExpChanged;
+    public event UnityAction<int, int> ExpChanged;
     public event UnityAction<int> CountPerksChanged;
     public static event UnityAction OnLevelGameOver;
 
@@ -43,7 +45,8 @@ public class Player : MonoBehaviour
         _animation = GetComponent<Animator>();
         _currentHeath = _heath;
         _currentSpell = _spells[0];
-        
+        ExpChanged?.Invoke(Exp, _needExpForUp); // для правильного отображение опыта в начале уровня
+
 
     }
     private void Update()
@@ -157,12 +160,12 @@ public class Player : MonoBehaviour
     public void AddExp(int exp)
     {
         Exp += exp;
-        ExpChanged?.Invoke(Exp);
-        if (Exp == 10)
+        ExpChanged?.Invoke(Exp, _needExpForUp);
+        if (Exp == _needExpForUp)
         {
             Exp = 0;
             CountPerks++;
-            ExpChanged?.Invoke(Exp);
+            ExpChanged?.Invoke(Exp, _needExpForUp);
             CountPerksChanged?.Invoke(CountPerks);
         }
 
