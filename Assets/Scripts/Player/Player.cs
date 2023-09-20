@@ -10,7 +10,7 @@ using UnityEngine.UIElements;
 public class Player : MonoBehaviour
 {
     [SerializeField] private Player _player;
-    [SerializeField] private int _heath;
+    [SerializeField] private int _maxHeath;
     [SerializeField] private List<Spell> _spells;
     [SerializeField] private Transform _shootpoint;
     [SerializeField] private float _areaAttack;
@@ -36,6 +36,8 @@ public class Player : MonoBehaviour
     public List<GameObject> EnemysInAttackCircle = new List<GameObject>();
     public GameObject CurrentEnemyToAttack => _currentEnemyToAttack;
     public float AreaAttack => _areaAttack;
+    public int CurrentHeath => _currentHeath;
+    public int MaxHeath => _maxHeath;
     public Transform Shootpoint => _shootpoint;
    
 
@@ -43,7 +45,7 @@ public class Player : MonoBehaviour
     {
         _player = GetComponent<Player>();
         _animation = GetComponent<Animator>();
-        _currentHeath = _heath;
+        _currentHeath = _maxHeath;
         _currentSpell = _spells[0];
         ExpChanged?.Invoke(Exp, _needExpForUp); // для правильного отображение опыта в начале уровня
 
@@ -135,7 +137,7 @@ public class Player : MonoBehaviour
     public void ApplyDamage(int damage)
     {
         _currentHeath -= damage;
-        HealthChanged?.Invoke(_currentHeath, _heath);
+        HealthChanged?.Invoke(_currentHeath, _maxHeath);
 
         if (_currentHeath <= 0)
         {
@@ -157,6 +159,12 @@ public class Player : MonoBehaviour
         MoneyChanged?.Invoke(Money);
 
     }
+    public void RemoveMoney(int money)
+    {
+        Money -= money;
+        MoneyChanged?.Invoke(Money);
+
+    }
     public void AddExp(int exp)
     {
         Exp += exp;
@@ -169,6 +177,12 @@ public class Player : MonoBehaviour
             CountPerksChanged?.Invoke(CountPerks);
         }
 
+    }
+    //лечение персонажа = надо убрать баг с тем что можно похилиться выше максимального уровня здоровья
+    public void AddHitPoints(int hitpoints)
+    {
+        _player._currentHeath += hitpoints;
+        HealthChanged?.Invoke(_currentHeath, _maxHeath);
     }
 
     public void ClearMoney()
