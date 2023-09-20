@@ -6498,6 +6498,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6573,12 +6574,32 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.12, y: -0.15, z: -6.260957}
-  m_LocalScale: {x: 1.2521913, y: 1.2521913, z: 1.2521913}
+  m_LocalPosition: {x: 0.442832, y: 8.99021, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4710395833847451}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e646c03f0f1e31c429dfb2d390fd8546, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _camera: {fileID: 519420031}
+  _player: {fileID: 1118867847}
+  _dumping: 1.3
+  _leftLimit: -20
+  _rightLimit: 20
+  _bottomLimit: -20
+  _upperLimit: 20
+  _gizmozShowLimit: 1
 --- !u!1 &524303844
 GameObject:
   m_ObjectHideFlags: 0
@@ -29373,7 +29394,6 @@ Transform:
   m_LocalScale: {x: 0.7986, y: 0.7986, z: 0.7986}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 519420032}
   - {fileID: 985035068}
   - {fileID: 1992762436}
   - {fileID: 103833638}
@@ -29711,6 +29731,7 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 519420032}
   - {fileID: 4710395833847451}
   - {fileID: 71807591}
   - {fileID: 114161399}
