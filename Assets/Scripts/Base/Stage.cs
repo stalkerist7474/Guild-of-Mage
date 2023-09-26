@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class Stage : MonoBehaviour, ISerializationCallbackReceiver
 {
-    [SerializeField] private string _nameBuilding;
-    [SerializeField] private string _nameStage;
-    [SerializeField] private Stage _nextStage;
-    [SerializeField] private bool _statusStage = false; //статус улучшения
-    [SerializeField] private bool _currentStage = false; // текущее последнее улучшение
-    [SerializeField] private float _timeForUpNextStage;
-    [SerializeField] private Sprite _currentIcon;
+    [SerializeField] public string _nameBuilding;
+    [SerializeField] public string _nameStage;
+    [SerializeField] public Stage _nextStage;
+    [SerializeField] public bool _statusStage = false; //статус улучшения
+    [SerializeField] public bool _currentStage = false; // текущее последнее улучшение
+    [SerializeField] public float _timeForUpNextStage;
+    [SerializeField] public Sprite _currentIcon;
 
     [SerializeField]private List<int> _keysIdItem = new List<int>();
     [SerializeField]private List<int> _valueCountItem = new List<int>();
@@ -20,7 +20,7 @@ public class Stage : MonoBehaviour, ISerializationCallbackReceiver
 
     public bool modifyValues;
 
-    //Настройка для отображение словаря в инспекторе
+    //Настройка для отображение словаря в инспекторе и подгрузка данных из Скриптапл обж
     public void OnBeforeSerialize()
     {
         if(modifyValues == false)
@@ -57,6 +57,13 @@ public class Stage : MonoBehaviour, ISerializationCallbackReceiver
         modifyValues = false;
 
     }
+
+
+
+
+
+
+
 
 
 }
