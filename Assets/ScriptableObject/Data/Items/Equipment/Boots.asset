@@ -15,8 +15,8 @@ MonoBehaviour:
   ID: 1112
   Name: "\u0411\u043E\u0442\u0438\u043D\u043A\u0438"
   Description: "\u041F\u0440\u043E\u0441\u0442\u043E \u0431\u043E\u0442\u0438\u043D\u043A\u0438"
-  Rarity: Common
-  EquipmentSlot: Boots
+  Rarity: 00000000
+  EquipmentSlot: 02000000
   Icon: {fileID: 21300000, guid: 1ba84a9bc86fe4a498ec82b87c4ea567, type: 3}
   SellPrice: 10
   BonusValueAttack: 0

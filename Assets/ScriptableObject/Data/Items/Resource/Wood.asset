@@ -15,6 +15,6 @@ MonoBehaviour:
   ID: 3
   Name: "\u0414\u0435\u0440\u0435\u0432\u043E"
   Description: "\u041A\u0430\u0436\u0435\u0442\u0441\u044F \u044D\u0442\u043E \u0441\u043E\u0441\u043D\u0430"
-  Rarity: Common
+  Rarity: 00000000
   Icon: {fileID: 21300000, guid: 1245b59252108334181053c0a177020d, type: 3}
   SellPrice: 3

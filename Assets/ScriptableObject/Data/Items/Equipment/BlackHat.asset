@@ -16,8 +16,8 @@ MonoBehaviour:
   Name: "\u0428\u043B\u044F\u043F\u0430"
   Description: "\u041F\u0440\u043E\u0441\u0442\u0430\u044F \u0448\u043B\u044F\u043F\u0430
     \u0443\u0447\u0435\u043D\u0438\u043A\u0430"
-  Rarity: Common
-  EquipmentSlot: Hat
+  Rarity: 00000000
+  EquipmentSlot: 03000000
   Icon: {fileID: 21300000, guid: 51afd85e3dc842549975fd0a80821d2c, type: 3}
   SellPrice: 15
   BonusValueAttack: 0.02
