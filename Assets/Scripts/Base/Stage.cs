@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Stage : MonoBehaviour, ISerializationCallbackReceiver
 {
+    public static Stage instance;
     [SerializeField] public string _nameBuilding;
     [SerializeField] public string _nameStage;
     [SerializeField] public Stage _nextStage;
@@ -16,7 +17,8 @@ public class Stage : MonoBehaviour, ISerializationCallbackReceiver
     [SerializeField]private List<int> _keysIdItem = new List<int>();
     [SerializeField]private List<int> _valueCountItem = new List<int>();
     [SerializeField]private DictionarySO _dictionaryData;
-    [SerializeField] private Dictionary<int, int> _needResourcesForNextStage = new Dictionary<int, int>();  // Id предмета и его количество
+    [SerializeField] public Dictionary<int, int> _needResourcesForNextStage = new Dictionary<int, int>();  // Id предмета и его количество
+    
 
     public bool modifyValues;
 

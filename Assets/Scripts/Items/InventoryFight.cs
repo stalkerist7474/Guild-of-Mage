@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using static UnityEditor.Progress;
 
 public class InventoryFight : MonoBehaviour
 {
+    public static InventoryFight instance;
+
     [SerializeField] private Player _player;
     //стартовые вещи
     [SerializeField] List<ItemEquipment> ItemEquipmentStart = new List<ItemEquipment>();
@@ -13,9 +16,14 @@ public class InventoryFight : MonoBehaviour
     //списки с инветарем боя
     List<ItemEquipment> ItemEquipmentFight = new List<ItemEquipment>();
     List<ItemRes> ItemResFight = new List<ItemRes>();
-    
+
+    public event UnityAction OnBaseResourcesChange;
+    private void Awake()
+    {
+        instance = this;
 
 
+    }
     private void Start()
     {
         for (int i = 0; i < ItemEquipmentStart.Count; i++)
@@ -99,7 +107,7 @@ public class InventoryFight : MonoBehaviour
             TrasportItemResToBase(ItemResFight[i]);
             
         }
-
+        OnBaseResourcesChange?.Invoke();
     }
 
     // перевод денег уровня на базу
