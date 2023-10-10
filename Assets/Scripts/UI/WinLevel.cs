@@ -22,6 +22,7 @@ public class WinLevel : MonoBehaviour
     {
         _winCanvas = GetComponent<CanvasGroup>();
         _winCanvas.alpha = 0.0f;
+        _winCanvas.blocksRaycasts = false;
     }
 
 
@@ -29,5 +30,6 @@ public class WinLevel : MonoBehaviour
     public void OnWin()
     {
         _winCanvas.alpha = 1.0f;
+        _winCanvas.blocksRaycasts = true;
     }
 }

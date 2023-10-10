@@ -20,6 +20,7 @@ public class GameOver : MonoBehaviour
     {
         _gameOverCanvas = GetComponent<CanvasGroup>();
         _gameOverCanvas.alpha = 0.0f;
+        _gameOverCanvas.blocksRaycasts = false;
     }
 
 
@@ -27,5 +28,6 @@ public class GameOver : MonoBehaviour
     public void OnGameOver()
     {
         _gameOverCanvas.alpha = 1.0f;
+        _gameOverCanvas.blocksRaycasts = true;
     }
 }
