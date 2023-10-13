@@ -12,6 +12,7 @@ public class ItemRes : ScriptableObject
     //public string Rarity;  //{ "Common", "Rare", "Epic", "Legendary" };
     [SerializeField] public List<TypeRarityItem> Rarity;
     public Sprite Icon;
+    public int Count;
     public int SellPrice;
 
     private void OnValidate()

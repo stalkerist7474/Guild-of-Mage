@@ -16,6 +16,7 @@ public class InventoryFight : MonoBehaviour
     //списки с инветарем боя
     List<ItemEquipment> ItemEquipmentFight = new List<ItemEquipment>();
     List<ItemRes> ItemResFight = new List<ItemRes>();
+    private bool _itemResFound = false;
 
     public event UnityAction OnBaseResourcesChange;
     private void Awake()
@@ -51,14 +52,47 @@ public class InventoryFight : MonoBehaviour
     }
 
 
-    //добавление ресурса в инвентарь боя
+    //добавление ресурса в инвентарь боя*************************
     public void AddItemRes(ItemRes item)
     {
-        ItemResFight.Add(item);
+        //ItemResFight.Add(item);
+        _itemResFound = false;
+        //ItemResBase.Add(item);
+        for (int i = 0; i < ItemResFight.Count; i++)
+        {
+            if (item.ID == ItemResFight[i].ID)
+            {
+                ItemResFight[i].Count += item.Count;
+                _itemResFound = true;
+            }
+        }
+        if (_itemResFound == false)
+        {
+            ItemResFight.Add(item);
+        }
     }
 
-    //Удаление ресурса из инвентаря боя
-    public void RemoveItemRes(ItemRes item)
+    //Удаление количество ресурса из инвентаря боя 
+    public void RemoveItemRes(ItemRes item, int count)
+    {
+        //ItemResFight.Remove(item);
+        _itemResFound = false;
+        //ItemResBase.Remove(item);
+        for (int i = 0; i < ItemResFight.Count; i++)
+        {
+            if (item.ID == ItemResFight[i].ID)
+            {
+                ItemResFight[i].Count -= count;
+                _itemResFound = true;
+            }
+        }
+        if (_itemResFound == false)
+        {
+            Debug.Log($"NO in base inventory this res{item.Name}");
+        }
+    }
+    //Удаление всего ресурса из инвентаря боя 
+    public void RemoveAllValueItemRes(ItemRes item)
     {
         ItemResFight.Remove(item);
     }
@@ -92,7 +126,7 @@ public class InventoryFight : MonoBehaviour
     public void TrasportItemResToBase(ItemRes item)
     {
         InventoryBase.instance.AddItemRes(item);
-        RemoveItemRes(item);
+        RemoveAllValueItemRes(item);
         
 
 

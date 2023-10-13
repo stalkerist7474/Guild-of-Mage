@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Money
   m_EditorClassIdentifier: 
   ID: 0
-  Name: 
-  Description: 
-  Rarity: 
-  Icon: {fileID: 0}
-  SellPrice: 0
+  Name: Money
+  Description: Money
+  Rarity: 00000000
+  Icon: {fileID: 21300000, guid: a0aaf10996946cf46bcec667910e3d39, type: 3}
+  Count: 1
+  SellPrice: 1
