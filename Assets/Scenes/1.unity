@@ -1069,6 +1069,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 42f6d1f802a82144a89c60d9276b7c41, type: 2}
   ItemEquipmentBase: []
   ItemResBase: []
+  _moneyTemplate: {fileID: 11400000, guid: 31d518b8862652840a9cdf3270b77c29, type: 2}
   BalanceBase: 0
 --- !u!1 &114161397
 GameObject:
@@ -30032,7 +30033,7 @@ PrefabInstance:
     - target: {fileID: 8369179951326898237, guid: 50cfd7ac8b029fe48b3693db97178e04,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8369179951326898237, guid: 50cfd7ac8b029fe48b3693db97178e04,
         type: 3}
@@ -30042,7 +30043,7 @@ PrefabInstance:
     - target: {fileID: 8369179951326898237, guid: 50cfd7ac8b029fe48b3693db97178e04,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8369179951326898237, guid: 50cfd7ac8b029fe48b3693db97178e04,
         type: 3}
@@ -30092,12 +30093,12 @@ PrefabInstance:
     - target: {fileID: 8369179951326898237, guid: 50cfd7ac8b029fe48b3693db97178e04,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 224.44
       objectReference: {fileID: 0}
     - target: {fileID: 8369179951326898237, guid: 50cfd7ac8b029fe48b3693db97178e04,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -256.02002
       objectReference: {fileID: 0}
     - target: {fileID: 8369179951326898237, guid: 50cfd7ac8b029fe48b3693db97178e04,
         type: 3}

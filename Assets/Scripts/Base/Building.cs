@@ -52,7 +52,7 @@ public class Building : MonoBehaviour
 
     public void TryImproveBuilding()
     {
-        if (CheckResForImprove(InventoryBase.instance.BalanceBase, InventoryBase.instance.ResourcesOnBase))
+        if (CheckResForImprove(InventoryBase.instance.ResourcesOnBase, _currentStage._needResourcesForNextStage))
         {
 
             Debug.Log("UP1");
@@ -72,7 +72,7 @@ public class Building : MonoBehaviour
 
     //проверка на то что достаточно ли ресурсов
 
-    private bool CheckResForImprove(int money, Dictionary<int, int> resStorage)
+    private bool CheckResForImprove(Dictionary<int, int> resStorage, Dictionary<int, int> needResForNext)
     {
         int currentID = 0;
         int currentValue = 0;

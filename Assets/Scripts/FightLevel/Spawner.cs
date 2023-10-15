@@ -25,11 +25,11 @@ public class Spawner : MonoBehaviour
     private bool _waveAllEnemySpawned;
 
     public event UnityAction AllEnemySpawned;
-    public event UnityAction OnAllEnemyDieCurrentWave;
-    public event UnityAction OnAllWaveEnd;
+    //public event UnityAction OnAllEnemyDieCurrentWave;
+    //public event UnityAction OnAllWaveEnd;
 
     public static event UnityAction OnLevelWin;
-    public event UnityAction OnLevelGameOver;
+    //public event UnityAction OnLevelGameOver;
 
     public event UnityAction<int, int> EnemyCountChanged;
 

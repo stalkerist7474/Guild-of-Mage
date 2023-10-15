@@ -15,7 +15,10 @@ public class InventoryBase : MonoBehaviour
     //списки с инветарем базы
     public List<ItemEquipment> ItemEquipmentBase = new List<ItemEquipment>();
     public List<ItemRes> ItemResBase = new List<ItemRes>();
-    public int BalanceBase;
+
+    [SerializeField] ItemRes _moneyTemplate;
+
+    //public int BalanceBase;
     private bool _itemResFound = false;
     private int _idMoney = 0;
 
@@ -103,14 +106,20 @@ public class InventoryBase : MonoBehaviour
     //Пополнение баланса базы игрока
     public void AddMoneyBase(int money)
     {
+        _itemResFound = false;
         //BalanceBase = BalanceBase + money;
         for (int i = 0; i < ItemResBase.Count; i++)
         {
             if (_idMoney == ItemResBase[i].ID)
             {
                 ItemResBase[i].Count += money;
-                //_itemResFound = true;
+                _itemResFound = true;
             }
+        }
+        if (_itemResFound == false)
+        {
+            _moneyTemplate.Count = money;
+            ItemResBase.Add(_moneyTemplate);
         }
     }
     //Уменьшение баланса базы игрока
@@ -129,22 +138,22 @@ public class InventoryBase : MonoBehaviour
 
     private void OnCountingItemRes()
     {
-        //int currentItemID = 0;
-        //Debug.Log("Trandfer");
-        //foreach (var item in ItemResBase)
-        //{
-        //    currentItemID = item.ID;
-        //    if (ResourcesOnBase.ContainsKey(currentItemID))
-        //    {
-        //        ResourcesOnBase[currentItemID] += 1;
-        //        currentItemID = 0;
-        //    }
-        //    else
-        //    {
-        //        ResourcesOnBase.Add(currentItemID, 1);
-        //        currentItemID = 0;
-        //    }
-        //}
+        int currentItemID = 0;
+        Debug.Log("Trandfer");
+        foreach (var item in ItemResBase)
+        {
+            currentItemID = item.ID;
+            if (ResourcesOnBase.ContainsKey(currentItemID))
+            {
+                ResourcesOnBase[currentItemID] += item.Count;
+                currentItemID = 0;
+            }
+            else
+            {
+                ResourcesOnBase.Add(currentItemID, item.Count);
+                currentItemID = 0;
+            }
+        }
         //ItemResBase.Clear();
     }
 }
