@@ -2366,9 +2366,9 @@ MonoBehaviour:
   _currentStage: 0
   _timeForUpNextStage: 0
   _currentIcon: {fileID: 858910927, guid: 1878558f869cd8348bae0c85368df6b5, type: 3}
-  _keysIdItem: 
-  _valueCountItem: 
-  _dictionaryData: {fileID: 0}
+  _keysIdItem: 00000000000000000000000000000000
+  _valueCountItem: 00000000000000000000000000000000
+  _dictionaryData: {fileID: 11400000, guid: 6e9b71cffbba812469a3dffe6d116740, type: 2}
   modifyValues: 0
 --- !u!1 &747780104
 GameObject:
@@ -2528,9 +2528,9 @@ MonoBehaviour:
   _currentStage: 0
   _timeForUpNextStage: 10
   _currentIcon: {fileID: 0}
-  _keysIdItem: 010000000200000003000000
-  _valueCountItem: 0c0000000a0000000d000000
-  _dictionaryData: {fileID: 11400000, guid: 278ab7dc5f87f564fbf1591165e3b129, type: 2}
+  _keysIdItem: 00000000000000000000000000000000
+  _valueCountItem: 00000000000000000000000000000000
+  _dictionaryData: {fileID: 11400000, guid: da1265c3ae9d678418eb6029ecfafdd6, type: 2}
   modifyValues: 0
 --- !u!1 &856761076
 GameObject:
@@ -2633,9 +2633,9 @@ MonoBehaviour:
   _currentStage: 0
   _timeForUpNextStage: 0
   _currentIcon: {fileID: 835577424, guid: 1878558f869cd8348bae0c85368df6b5, type: 3}
-  _keysIdItem: 
-  _valueCountItem: 
-  _dictionaryData: {fileID: 0}
+  _keysIdItem: 00000000000000000000000000000000
+  _valueCountItem: 00000000000000000000000000000000
+  _dictionaryData: {fileID: 11400000, guid: ee4575c74f482e543b5e907e8be63c0f, type: 2}
   modifyValues: 0
 --- !u!1 &931223716
 GameObject:
@@ -2828,9 +2828,9 @@ MonoBehaviour:
   _currentStage: 1
   _timeForUpNextStage: 15
   _currentIcon: {fileID: 1454536317, guid: 1878558f869cd8348bae0c85368df6b5, type: 3}
-  _keysIdItem: 
-  _valueCountItem: 
-  _dictionaryData: {fileID: 0}
+  _keysIdItem: 00000000000000000000000000000000
+  _valueCountItem: 00000000000000000000000000000000
+  _dictionaryData: {fileID: 11400000, guid: 3a0be7f48077944449511845df58537b, type: 2}
   modifyValues: 0
 --- !u!4 &1727890193 stripped
 Transform:
@@ -2879,29 +2879,6 @@ MonoBehaviour:
   - 0
   - 1
   - 2
---- !u!114 &1727890197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1507464224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25d89d221c74b0e43ab934d2562850e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _nameBuilding: 
-  _nameStage: 
-  _nextStage: {fileID: 0}
-  _statusStage: 0
-  _currentStage: 0
-  _timeForUpNextStage: 0
-  _currentIcon: {fileID: 0}
-  _keysIdItem: 
-  _valueCountItem: 
-  _dictionaryData: {fileID: 0}
-  modifyValues: 0
 --- !u!1 &1746867225
 GameObject:
   m_ObjectHideFlags: 0
@@ -3287,10 +3264,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1727890195}
-    - targetCorrespondingSourceObject: {fileID: 3748544310463107447, guid: c7fe14357706ad142bb435a27930b53e,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1727890197}
     - targetCorrespondingSourceObject: {fileID: 4772472273997087165, guid: c7fe14357706ad142bb435a27930b53e,
         type: 3}
       insertIndex: -1
