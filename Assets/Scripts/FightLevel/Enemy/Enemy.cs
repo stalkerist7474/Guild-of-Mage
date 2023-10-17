@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private int _heath;
     [SerializeField] private int _rewardGold;
     [SerializeField] private int _rewardExp;
+    
 
     private Player _target;
 
@@ -31,6 +32,9 @@ public class Enemy : MonoBehaviour
         if (_heath <= 0)
         {
             Dying?.Invoke(this);
+            //----------------
+            
+            //----------------
             Destroy(gameObject);
             GetListEnemys().Remove(null);
         }

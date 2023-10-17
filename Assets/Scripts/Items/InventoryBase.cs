@@ -8,6 +8,7 @@ using static UnityEditor.Progress;
 public class InventoryBase : MonoBehaviour
 {
     public static InventoryBase instance;
+    //public static InventoryBase singleton { get; set; }
     //стартовые вещи
     [SerializeField] List <ItemEquipment> ItemEquipmentStart = new List <ItemEquipment> ();
     [SerializeField] List <ItemRes> ItemResStart = new List <ItemRes> ();
@@ -41,7 +42,16 @@ public class InventoryBase : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+
+        if (!instance)      //гаранти€ что экземпл€р будет один
+        {
+            instance = this;
+            DontDestroyOnLoad(this);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
         
         
     }

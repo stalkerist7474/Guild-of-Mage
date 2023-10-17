@@ -24,6 +24,12 @@ public class Spawner : MonoBehaviour
     private bool _waveComplete;
     private bool _waveAllEnemySpawned;
 
+    //drop setting
+    [SerializeField] private int _dropRating;
+    [SerializeField] private ItemRes item;
+    private int _moneyScoore;
+    private int _resScoore;
+
     public event UnityAction AllEnemySpawned;
     //public event UnityAction OnAllEnemyDieCurrentWave;
     //public event UnityAction OnAllWaveEnd;
@@ -148,7 +154,11 @@ public class Spawner : MonoBehaviour
         _enemyCount--;
         _player.AddMoney(enemy.RewardGold);
         _player.AddExp(enemy.RewardExp);
-        //Debug.Log($"_enemyCount222={_enemyCount}");
+
+        _moneyScoore += 2;
+        _resScoore++;
+        
+        
         if (_enemyCount == 0)
         {
             _timeAfterLastWaveDone = 0;
@@ -173,11 +183,16 @@ public class Spawner : MonoBehaviour
     public void Win()
     {
         Debug.Log($"WINNER1");
+        CalculatedDrop();
         OnLevelWin?.Invoke();
         Debug.Log($"WINNER2");
     }
 
-
+    private void CalculatedDrop()
+    {
+        item.Count = _moneyScoore * _dropRating;
+        InventoryFight.instance.AddItemRes( item );
+    }
 
 }
 
