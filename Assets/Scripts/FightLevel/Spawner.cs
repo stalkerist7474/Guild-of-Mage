@@ -25,9 +25,7 @@ public class Spawner : MonoBehaviour
     private bool _waveAllEnemySpawned;
 
     //drop setting
-    [SerializeField] private int _dropRating;
-    [SerializeField] private ItemRes item;
-    //private int _moneyScoore;
+
     public int ResScoore;
 
     public event UnityAction AllEnemySpawned;

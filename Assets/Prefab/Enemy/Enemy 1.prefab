@@ -110,6 +110,7 @@ MonoBehaviour:
   _heath: 200
   _rewardGold: 5
   _rewardExp: 5
+  _rewardResScoore: 500
 --- !u!95 &1911094011665400639
 Animator:
   serializedVersion: 5
@@ -300,7 +301,7 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 1
-  m_UseAutoMass: 0
+  m_UseAutoMass: 1
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05

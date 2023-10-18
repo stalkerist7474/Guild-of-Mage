@@ -7668,6 +7668,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 42f6d1f802a82144a89c60d9276b7c41, type: 2}
   ItemResFightData: []
   TypeDropItemResFightOnThisLevel: []
+  _maxRandomMultiply: 0
 --- !u!114 &648173506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11741,6 +11742,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 42f6d1f802a82144a89c60d9276b7c41, type: 2}
   ItemResFightData: []
   TypeDropItemResFightOnThisLevel: []
+  _maxRandomMultiply: 0
 --- !u!114 &1237346049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28427,8 +28429,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ef226746a22b0c04889de24bed20580d, type: 2}
   - {fileID: 11400000, guid: b9f79b85cebd1be4eaa5c5c360c08541, type: 2}
   TypeDropItemResFightOnThisLevel:
-  - {fileID: 11400000, guid: e55d2b37790a8f942ae783715139bfbe, type: 2}
   - {fileID: 11400000, guid: b9f79b85cebd1be4eaa5c5c360c08541, type: 2}
+  - {fileID: 11400000, guid: ef226746a22b0c04889de24bed20580d, type: 2}
+  _maxRandomMultiply: 2
 --- !u!1 &1890198754
 GameObject:
   m_ObjectHideFlags: 0

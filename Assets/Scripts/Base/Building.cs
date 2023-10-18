@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.Events;
@@ -56,6 +57,7 @@ public class Building : MonoBehaviour
         {
 
             Debug.Log("UP1");
+            PayResInBuilding(_currentStage._needResourcesForNextStage); //платим за улучшение
             _currentStage._currentStage = false;  //убираем флаг актуальности со старой стадии
 
             _currentStage = _currentStage._nextStage; //следующая стадия теперь текущая
@@ -90,6 +92,22 @@ public class Building : MonoBehaviour
             currentValue = 0;
         }
         return true;
+    }
+
+    //тратим ресурсы в здании
+
+    private void PayResInBuilding(Dictionary<int, int> payingListRes)
+    {
+        for (int i = 0; i < payingListRes.Count; i++)
+        {
+            for (int j = 0; i < InventoryBase.instance.ItemResBase.Count; j++)
+            {
+                if (payingListRes.Keys.ElementAt(i) == InventoryBase.instance.ItemResBase[j].ID)
+                {
+                    InventoryBase.instance.ItemResBase[j].Count -= payingListRes[i];
+                }
+            }
+        }
     }
 
     //проверка актуальной стадии здания

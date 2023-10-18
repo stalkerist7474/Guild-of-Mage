@@ -197,11 +197,7 @@ MonoBehaviour:
   _heath: 200
   _rewardGold: 20
   _rewardExp: 2
-  DropRes:
-  - {fileID: 1995741300189518878, guid: 92fed74a5c8d9a04893175d183f16fb0, type: 3}
-  - {fileID: 2191614183163754897, guid: 35cc5e4e5303e9e4fb711a9273e76295, type: 3}
-  - {fileID: 6260506522730131431, guid: ec0d8635058f1b14e96fc80550656095, type: 3}
-  - {fileID: 6671801115428330361, guid: 9a0e879a25c54124e99cafe3bef80f70, type: 3}
+  _rewardResScoore: 100
 --- !u!95 &277678536736692804
 Animator:
   serializedVersion: 5
@@ -392,8 +388,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 1
-  m_UseAutoMass: 0
-  m_Mass: 1
+  m_UseAutoMass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0

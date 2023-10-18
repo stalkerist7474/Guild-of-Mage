@@ -17,6 +17,7 @@ public class InventoryFight : MonoBehaviour
     List<ItemEquipment> ItemEquipmentFight = new List<ItemEquipment>();
     [SerializeField] List<ItemRes> ItemResFightData = new List<ItemRes>();
     [SerializeField] List<ItemRes> TypeDropItemResFightOnThisLevel = new List<ItemRes>();
+    [SerializeField, Range(1f, 10f)] private int _maxRandomMultiply;
     private bool _itemResFound = false;
 
     public event UnityAction OnBaseResourcesChange;
@@ -59,44 +60,50 @@ public class InventoryFight : MonoBehaviour
     }
 
 
-    //добавление ресурса в инвентарь боя*************************
+    //добавление ресурса в инвентарь боя
     public void AddItemRes(int resScooreRating)
     {
-        int count = 0;
+        int coefficientRand = Random.RandomRange(1, _maxRandomMultiply);
+
+        int lostValueScoore = resScooreRating;
+        Debug.Log($"resScooreRating={resScooreRating}");
 
         for (int i = 0; i < TypeDropItemResFightOnThisLevel.Count; i++)
         {
-            count = 0;
+            int countAddRes = 0;
+            if (lostValueScoore > 0)        // проверка что общий счет еще положительный
+            {
 
-            count = resScooreRating / 2 % TypeDropItemResFightOnThisLevel[i].ScoorePrice;
+                if( i == TypeDropItemResFightOnThisLevel.Count)                         //если это последний добавляемый ресурс
+                {
+                    countAddRes = lostValueScoore % TypeDropItemResFightOnThisLevel[i].ScoorePrice;
+                    TypeDropItemResFightOnThisLevel[i].Count += countAddRes;
+                    countAddRes = 0;
+                }
 
-            TypeDropItemResFightOnThisLevel[i].Count += count;
+                countAddRes = (lostValueScoore / coefficientRand) % TypeDropItemResFightOnThisLevel[i].ScoorePrice; //определяем сколько добавить(купить) можно ресурсов на оставшееся кол во очков, есть поправка на рандом
 
-            
+                Debug.Log($"Add fight inv ={countAddRes}-count");
+                TypeDropItemResFightOnThisLevel[i].Count += countAddRes;   //добавляем количество в скриптабл объект
+                lostValueScoore -= TypeDropItemResFightOnThisLevel[i].ScoorePrice * countAddRes; //отнимаем затраченное количество очков от общего счета
+
+                countAddRes = 0; //обнуляем счетчик
+            }
+
+
+
+
+
+
         }
-        ////ItemResFight.Add(item);
-        //_itemResFound = false;
-        ////ItemResBase.Add(item);
-        //for (int i = 0; i < ItemResFightData.Count; i++)
-        //{
-        //    if (item.ID == ItemResFightData[i].ID)
-        //    {
-        //        ItemResFightData[i].Count += item.Count;
-        //        _itemResFound = true;
-        //    }
-        //}
-        //if (_itemResFound == false)
-        //{
-        //    ItemResFightData.Add(item);
-        //}
+        
     }
 
     //Удаление количество ресурса из инвентаря боя 
     public void RemoveItemRes(ItemRes item, int count)
-    {
-        //ItemResFight.Remove(item);
+    {  
         _itemResFound = false;
-        //ItemResBase.Remove(item);
+
         for (int i = 0; i < ItemResFightData.Count; i++)
         {
             if (item.ID == ItemResFightData[i].ID)

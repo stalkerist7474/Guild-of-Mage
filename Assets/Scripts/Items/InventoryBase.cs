@@ -77,7 +77,7 @@ public class InventoryBase : MonoBehaviour
     //добавление ресурса в инвентарь базы
     public void AddItemRes(int id, int count)
     {
-        _itemResFound = false;
+        
 
         for (int i = 0; i < ItemResBase.Count; i++)
         {
@@ -90,19 +90,7 @@ public class InventoryBase : MonoBehaviour
                 Debug.Log($"not found res ID={id}");
             }
         }
-        //ItemResBase.Add(item);
-        //for (int i = 0; i < ItemResBase.Count; i++)
-        //{
-        //    if(item.ID == ItemResBase[i].ID)
-        //    {
-        //        ItemResBase[i].Count += item.Count;
-        //        _itemResFound = true;
-        //    }
-        //}
-        //if(_itemResFound == false)
-        //{
-        //    ItemResBase.Add(item);
-        //}
+        
     }
 
     //Удаление ресурса из инвентаря базы
@@ -129,7 +117,7 @@ public class InventoryBase : MonoBehaviour
     public void AddMoneyBase(int money)
     {
         _itemResFound = false;
-        //BalanceBase = BalanceBase + money;
+        
         for (int i = 0; i < ItemResBase.Count; i++)
         {
             if (_idMoney == ItemResBase[i].ID)
@@ -147,35 +135,35 @@ public class InventoryBase : MonoBehaviour
     //Уменьшение баланса базы игрока
     public void RemoveMoneyBase(int money)
     {
-        //BalanceBase = BalanceBase - money;
+        
         for (int i = 0; i < ItemResBase.Count; i++)
         {
             if (_idMoney == ItemResBase[i].ID)
             {
                 ItemResBase[i].Count -= money;
-                //_itemResFound = true;
+                
             }
         }
     }
 
-    private void OnCountingItemRes()
-    {
-        int currentItemID = 0;
-        Debug.Log("Trandfer");
-        foreach (var item in ItemResBase)
-        {
-            currentItemID = item.ID;
-            if (ResourcesOnBase.ContainsKey(currentItemID))
-            {
-                ResourcesOnBase[currentItemID] += item.Count;
-                currentItemID = 0;
-            }
-            else
-            {
-                ResourcesOnBase.Add(currentItemID, item.Count);
-                currentItemID = 0;
-            }
-        }
-        //ItemResBase.Clear();
-    }
+    //private void OnCountingItemRes()
+    //{
+    //    int currentItemID = 0;
+    //    Debug.Log("Trandfer");
+    //    foreach (var item in ItemResBase)
+    //    {
+    //        currentItemID = item.ID;
+    //        if (ResourcesOnBase.ContainsKey(currentItemID))
+    //        {
+    //            ResourcesOnBase[currentItemID] += item.Count;
+    //            currentItemID = 0;
+    //        }
+    //        else
+    //        {
+    //            ResourcesOnBase.Add(currentItemID, item.Count);
+    //            currentItemID = 0;
+    //        }
+    //    }
+    //    //ItemResBase.Clear();
+    //}
 }
