@@ -6,13 +6,15 @@ using UnityEngine;
 [CreateAssetMenu(fileName ="ItemResData",menuName = "AddItem/Resource")]
 public class ItemRes : ScriptableObject
 {
-    public int ID;
-    public string Name;
-    public string Description;
+    [SerializeField] public int ID;
+    [SerializeField] public string Name;
+    [SerializeField] public string Description;
     [SerializeField] public List<TypeRarityItem> Rarity;
-    public Sprite Icon;
-    public int Count;
-    public int SellPrice;
+    [SerializeField] public Sprite Icon;
+    [SerializeField] public int Count;
+    [SerializeField] public int SellPrice;
+    [SerializeField] public int ScoorePrice;
+
     //public string Rarity;  //{ "Common", "Rare", "Epic", "Legendary" };
 
     //public ItemRes(int id, string name, string description, TypeRarityItem type,  int countItem, int sellPrice)

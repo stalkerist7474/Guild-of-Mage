@@ -2417,7 +2417,11 @@ MonoBehaviour:
   ItemEquipmentStart: []
   ItemResStart: []
   ItemEquipmentBase: []
-  ItemResBase: []
+  ItemResBase:
+  - {fileID: 11400000, guid: 41d0083ced17565428ef976cdb2b6904, type: 2}
+  - {fileID: 11400000, guid: 31d518b8862652840a9cdf3270b77c29, type: 2}
+  - {fileID: 11400000, guid: 42f6d1f802a82144a89c60d9276b7c41, type: 2}
+  - {fileID: 11400000, guid: 799a59b898bbc25419b879baa2a30234, type: 2}
   _moneyTemplate: {fileID: 11400000, guid: 31d518b8862652840a9cdf3270b77c29, type: 2}
 --- !u!1 &747780104
 GameObject:

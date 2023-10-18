@@ -15,7 +15,8 @@ public class InventoryFight : MonoBehaviour
 
     //списки с инветарем боя
     List<ItemEquipment> ItemEquipmentFight = new List<ItemEquipment>();
-    List<ItemRes> ItemResFight = new List<ItemRes>();
+    [SerializeField] List<ItemRes> ItemResFightData = new List<ItemRes>();
+    [SerializeField] List<ItemRes> TypeDropItemResFightOnThisLevel = new List<ItemRes>();
     private bool _itemResFound = false;
 
     public event UnityAction OnBaseResourcesChange;
@@ -27,14 +28,20 @@ public class InventoryFight : MonoBehaviour
     }
     private void Start()
     {
-        for (int i = 0; i < ItemEquipmentStart.Count; i++)
-        {
-            AddItemEquipment(ItemEquipmentStart[i]);
-        }
+        //for (int i = 0; i < ItemEquipmentStart.Count; i++)
+        //{
+        //    AddItemEquipment(ItemEquipmentStart[i]);
+        //}
 
-        for (int i = 0; i < ItemResStart.Count; i++)
+        //for (int i = 0; i < ItemResStart.Count; i++)
+        //{
+        //    AddItemRes(ItemResStart[i]);
+        //}
+
+        //обнуляем перед стартом показатели накопленных ресурсов за бой
+        for (int i = 0; i < ItemResFightData.Count; i++)
         {
-            AddItemRes(ItemResStart[i]);
+            ItemResFightData[i].Count = 0;
         }
     }
 
@@ -53,23 +60,35 @@ public class InventoryFight : MonoBehaviour
 
 
     //добавление ресурса в инвентарь боя*************************
-    public void AddItemRes(ItemRes item)
+    public void AddItemRes(int resScooreRating)
     {
-        //ItemResFight.Add(item);
-        _itemResFound = false;
-        //ItemResBase.Add(item);
-        for (int i = 0; i < ItemResFight.Count; i++)
+        int count = 0;
+
+        for (int i = 0; i < TypeDropItemResFightOnThisLevel.Count; i++)
         {
-            if (item.ID == ItemResFight[i].ID)
-            {
-                ItemResFight[i].Count += item.Count;
-                _itemResFound = true;
-            }
+            count = 0;
+
+            count = resScooreRating / 2 % TypeDropItemResFightOnThisLevel[i].ScoorePrice;
+
+            TypeDropItemResFightOnThisLevel[i].Count += count;
+
+            
         }
-        if (_itemResFound == false)
-        {
-            ItemResFight.Add(item);
-        }
+        ////ItemResFight.Add(item);
+        //_itemResFound = false;
+        ////ItemResBase.Add(item);
+        //for (int i = 0; i < ItemResFightData.Count; i++)
+        //{
+        //    if (item.ID == ItemResFightData[i].ID)
+        //    {
+        //        ItemResFightData[i].Count += item.Count;
+        //        _itemResFound = true;
+        //    }
+        //}
+        //if (_itemResFound == false)
+        //{
+        //    ItemResFightData.Add(item);
+        //}
     }
 
     //Удаление количество ресурса из инвентаря боя 
@@ -78,11 +97,11 @@ public class InventoryFight : MonoBehaviour
         //ItemResFight.Remove(item);
         _itemResFound = false;
         //ItemResBase.Remove(item);
-        for (int i = 0; i < ItemResFight.Count; i++)
+        for (int i = 0; i < ItemResFightData.Count; i++)
         {
-            if (item.ID == ItemResFight[i].ID)
+            if (item.ID == ItemResFightData[i].ID)
             {
-                ItemResFight[i].Count -= count;
+                ItemResFightData[i].Count -= count;
                 _itemResFound = true;
             }
         }
@@ -94,7 +113,7 @@ public class InventoryFight : MonoBehaviour
     //Удаление всего ресурса из инвентаря боя 
     public void RemoveAllValueItemRes(ItemRes item)
     {
-        ItemResFight.Remove(item);
+        ItemResFightData.Remove(item);
     }
 
     ///++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -123,10 +142,10 @@ public class InventoryFight : MonoBehaviour
     }
 
     //добавление ресурса в инвентарь базы из боя
-    public void TrasportItemResToBase(ItemRes item)
+    public void TrasportItemResToBase(int id, int count)
     {
-        InventoryBase.instance.AddItemRes(item);
-        RemoveAllValueItemRes(item);
+        InventoryBase.instance.AddItemRes(id , count);
+        //RemoveAllValueItemRes( id, count);
         
 
 
@@ -136,9 +155,9 @@ public class InventoryFight : MonoBehaviour
     public void TrasportAllItemResToBase()
     {
 
-        for (int i = 0; i < ItemResFight.Count; i++)
+        for (int i = 0; i < TypeDropItemResFightOnThisLevel.Count; i++)
         {
-            TrasportItemResToBase(ItemResFight[i]);
+            TrasportItemResToBase(TypeDropItemResFightOnThisLevel[i].ID, TypeDropItemResFightOnThisLevel[i].Count);
             
         }
         OnBaseResourcesChange?.Invoke();

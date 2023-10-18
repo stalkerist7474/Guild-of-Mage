@@ -8,12 +8,16 @@ public class Enemy : MonoBehaviour
     [SerializeField] private int _heath;
     [SerializeField] private int _rewardGold;
     [SerializeField] private int _rewardExp;
+
+    [SerializeField] private int _rewardResScoore;
+   
     
 
     private Player _target;
 
     public int RewardGold => _rewardGold;
     public int RewardExp => _rewardExp;
+    public int RewardResScoore => _rewardResScoore;
     public Player Target => _target;
 
     public event UnityAction<Enemy> Dying;

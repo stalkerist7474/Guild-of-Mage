@@ -75,22 +75,34 @@ public class InventoryBase : MonoBehaviour
 
 
     //добавление ресурса в инвентарь базы
-    public void AddItemRes(ItemRes item)
+    public void AddItemRes(int id, int count)
     {
         _itemResFound = false;
-        //ItemResBase.Add(item);
+
         for (int i = 0; i < ItemResBase.Count; i++)
         {
-            if(item.ID == ItemResBase[i].ID)
+            if(id == ItemResBase[i].ID)
             {
-                ItemResBase[i].Count += item.Count;
-                _itemResFound = true;
+                ItemResBase[i].Count += count;
+            }
+            else
+            {
+                Debug.Log($"not found res ID={id}");
             }
         }
-        if(_itemResFound == false)
-        {
-            ItemResBase.Add(item);
-        }
+        //ItemResBase.Add(item);
+        //for (int i = 0; i < ItemResBase.Count; i++)
+        //{
+        //    if(item.ID == ItemResBase[i].ID)
+        //    {
+        //        ItemResBase[i].Count += item.Count;
+        //        _itemResFound = true;
+        //    }
+        //}
+        //if(_itemResFound == false)
+        //{
+        //    ItemResBase.Add(item);
+        //}
     }
 
     //Удаление ресурса из инвентаря базы

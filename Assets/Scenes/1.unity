@@ -885,6 +885,7 @@ MonoBehaviour:
   _player: {fileID: 1118867847}
   _dropRating: 2
   item: {fileID: 11400000, guid: 31d518b8862652840a9cdf3270b77c29, type: 2}
+  ResScoore: 0
 --- !u!1001 &73372501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7665,6 +7666,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8aa2424c7703c2f4aae135b00a3593ca, type: 2}
   ItemResStart:
   - {fileID: 11400000, guid: 42f6d1f802a82144a89c60d9276b7c41, type: 2}
+  ItemResFightData: []
+  TypeDropItemResFightOnThisLevel: []
 --- !u!114 &648173506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11736,6 +11739,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8aa2424c7703c2f4aae135b00a3593ca, type: 2}
   ItemResStart:
   - {fileID: 11400000, guid: 42f6d1f802a82144a89c60d9276b7c41, type: 2}
+  ItemResFightData: []
+  TypeDropItemResFightOnThisLevel: []
 --- !u!114 &1237346049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28416,6 +28421,14 @@ MonoBehaviour:
   _player: {fileID: 1118867847}
   ItemEquipmentStart: []
   ItemResStart: []
+  ItemResFightData:
+  - {fileID: 11400000, guid: 532708b8fdded0147b903c5d9d1fa983, type: 2}
+  - {fileID: 11400000, guid: e55d2b37790a8f942ae783715139bfbe, type: 2}
+  - {fileID: 11400000, guid: ef226746a22b0c04889de24bed20580d, type: 2}
+  - {fileID: 11400000, guid: b9f79b85cebd1be4eaa5c5c360c08541, type: 2}
+  TypeDropItemResFightOnThisLevel:
+  - {fileID: 11400000, guid: e55d2b37790a8f942ae783715139bfbe, type: 2}
+  - {fileID: 11400000, guid: b9f79b85cebd1be4eaa5c5c360c08541, type: 2}
 --- !u!1 &1890198754
 GameObject:
   m_ObjectHideFlags: 0

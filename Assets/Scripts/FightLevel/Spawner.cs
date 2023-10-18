@@ -27,8 +27,8 @@ public class Spawner : MonoBehaviour
     //drop setting
     [SerializeField] private int _dropRating;
     [SerializeField] private ItemRes item;
-    private int _moneyScoore;
-    private int _resScoore;
+    //private int _moneyScoore;
+    public int ResScoore;
 
     public event UnityAction AllEnemySpawned;
     //public event UnityAction OnAllEnemyDieCurrentWave;
@@ -155,8 +155,8 @@ public class Spawner : MonoBehaviour
         _player.AddMoney(enemy.RewardGold);
         _player.AddExp(enemy.RewardExp);
 
-        _moneyScoore += 2;
-        _resScoore++;
+
+        ResScoore += enemy.RewardResScoore;
         
         
         if (_enemyCount == 0)
@@ -190,8 +190,8 @@ public class Spawner : MonoBehaviour
 
     private void CalculatedDrop()
     {
-        item.Count = _moneyScoore * _dropRating;
-        InventoryFight.instance.AddItemRes( item );
+        
+        InventoryFight.instance.AddItemRes(ResScoore);
     }
 
 }
