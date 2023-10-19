@@ -23,20 +23,21 @@ public class Building : MonoBehaviour
     private void Awake()
     {
         _icon = GetComponent<SpriteRenderer>();
+       // _stages[0] = GetComponent<Stage>();
     }
 
     //метод инициализации текущей стадии здания
 
     private void Start()
     {
-        Debug.Log("+++++++");
+       // Debug.Log("+++++++");
         foreach (var stage in _stages)
         {
             if (stage != null)
             {
                 if (stage._currentStage)
                 {
-                    Debug.Log("+++++++********************");
+                    //Debug.Log("+++++++********************");
                     _currentStage = stage;
                     _currentStageicon = stage._currentIcon;
                     _aboutBuildingStage = stage._nameStage;
@@ -53,7 +54,12 @@ public class Building : MonoBehaviour
 
     public void TryImproveBuilding()
     {
-        if (CheckResForImprove(InventoryBase.instance.ResourcesOnBase, _currentStage._needResourcesForNextStage))
+        Debug.Log("UP0");
+        Debug.Log($"_currentStage._needResourcesForNextStage={_currentStage._needResourcesForNextStage.Count}_currentStage._needResourcesForNextStage={_currentStage._needResourcesForNextStage.Keys}");
+        Debug.Log($"_stages={_stages.Count}");
+
+
+        if (CheckResForImprove(InventoryBase.instance.ItemResBase, _currentStage._needResourcesForNextStage))
         {
 
             Debug.Log("UP1");
@@ -74,40 +80,91 @@ public class Building : MonoBehaviour
 
     //проверка на то что достаточно ли ресурсов
 
-    private bool CheckResForImprove(Dictionary<int, int> resStorage, Dictionary<int, int> needResForNext)
+    private bool CheckResForImprove(List<ItemRes> resStorage, Dictionary<int, int> needResForNext)
     {
         int currentID = 0;
         int currentValue = 0;
-        //Stage.instance._needResourcesForNextStage;
-        foreach (var item in Stage.instance._needResourcesForNextStage)
+        bool status = false;
+        Debug.Log("Check for up");
+
+
+        foreach ( var res in needResForNext)
         {
-            currentID = item.Key;
-            currentValue = item.Value;
-            if (currentValue != resStorage[currentID])
+            currentID = res.Key; currentID = res.Value;
+
+            for ( var i = 0; i < resStorage.Count; i++)
             {
-                Debug.Log($"Не достаточно ресурсов{currentID}");
-                return false;
+                if (resStorage[i].ID == currentID)
+                {
+                    Debug.Log("Check ID OK!");
+
+                    if (resStorage[i].Count >= currentValue)
+                    {
+                        status = true;
+                    }
+                    else
+                    {
+                        status = false;
+                        Debug.Log("Check for up NO RES");
+                    }
+
+
+
+                }
+                
+
+
+
             }
-            currentID = 0;
-            currentValue = 0;
         }
-        return true;
+
+        if (status)
+        {
+            return true;
+        }
+        else { return false; }
+
     }
 
     //тратим ресурсы в здании
 
     private void PayResInBuilding(Dictionary<int, int> payingListRes)
     {
-        for (int i = 0; i < payingListRes.Count; i++)
+
+        int currentID = 0;
+        int currentValue = 0;
+
+        var storage = InventoryBase.instance.ItemResBase;
+
+        foreach (var res in payingListRes)
         {
-            for (int j = 0; i < InventoryBase.instance.ItemResBase.Count; j++)
+            currentID = res.Key; currentID = res.Value;
+
+            for (var i = 0; i < storage.Count; i++)
             {
-                if (payingListRes.Keys.ElementAt(i) == InventoryBase.instance.ItemResBase[j].ID)
+                if (storage[i].ID == currentID)
                 {
-                    InventoryBase.instance.ItemResBase[j].Count -= payingListRes[i];
+
+                    if (storage[i].Count >= currentValue)
+                    {
+                        storage[i].Count -= currentValue;
+                        Debug.Log($"Pay {storage[i].name} = {currentValue} count ");
+                    }
+                    else
+                    {
+                        Debug.Log("eerr pay");
+                    }
+
+
+
                 }
+
+
+
+
             }
         }
+
     }
 
     //проверка актуальной стадии здания

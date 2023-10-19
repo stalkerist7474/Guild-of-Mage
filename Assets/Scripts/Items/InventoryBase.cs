@@ -30,12 +30,12 @@ public class InventoryBase : MonoBehaviour
     private void OnEnable()
     {
 
-         InventoryFight.instance.OnBaseResourcesChange += OnCountingItemRes;
+        // InventoryFight.instance.OnBaseResourcesChange += OnCountingItemRes;
     }
 
     private void OnDisable()
     {
-        InventoryFight.instance.OnBaseResourcesChange -= OnCountingItemRes; ;
+       // InventoryFight.instance.OnBaseResourcesChange -= OnCountingItemRes; ;
     }
 
 

@@ -22,6 +22,19 @@ public class Stage : MonoBehaviour, ISerializationCallbackReceiver
 
     public bool modifyValues;
 
+
+
+    private void Start()
+    {
+        Debug.Log("11");
+        Debug.Log(_needResourcesForNextStage.Count);
+        foreach (var item in _needResourcesForNextStage)
+        {
+            Debug.Log("11");
+            Debug.Log($"item={item.Value}");
+        }
+    }
+
     //Настройка для отображение словаря в инспекторе и подгрузка данных из Скриптапл обж
     public void OnBeforeSerialize()
     {
