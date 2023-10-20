@@ -30,12 +30,16 @@ public class Building : MonoBehaviour
 
     private void Start()
     {
+        foreach (var item in _stages)
+        {
+            item.Load();
+        }
        // Debug.Log("+++++++");
         foreach (var stage in _stages)
         {
             if (stage != null)
             {
-                if (stage._currentStage)
+                if (stage._currentStageBool)
                 {
                     //Debug.Log("+++++++********************");
                     _currentStage = stage;
@@ -54,6 +58,7 @@ public class Building : MonoBehaviour
 
     public void TryImproveBuilding()
     {
+        //_currentStage.Load();
         Debug.Log("UP0");
         Debug.Log($"_currentStage._needResourcesForNextStage={_currentStage._needResourcesForNextStage.Count}_currentStage._needResourcesForNextStage={_currentStage._needResourcesForNextStage.Keys}");
         Debug.Log($"_stages={_stages.Count}");
@@ -64,11 +69,11 @@ public class Building : MonoBehaviour
 
             Debug.Log("UP1");
             PayResInBuilding(_currentStage._needResourcesForNextStage); //платим за улучшение
-            _currentStage._currentStage = false;  //убираем флаг актуальности со старой стадии
+            _currentStage._currentStageBool = false;  //убираем флаг актуальности со старой стадии
 
             _currentStage = _currentStage._nextStage; //следующа€ стади€ теперь текуща€
-            _currentStage._statusStage = true; //обновл€ем что нова€ стади€ последн€€
-            _currentStage._currentStage = true;
+            _currentStage._statusStageBool = true; //обновл€ем что нова€ стади€ последн€€
+            _currentStage._currentStageBool = true;
 
             _currentStageicon = _currentStage._currentIcon; //обновл€ем картинку
             _icon.sprite = _currentStageicon;
@@ -90,7 +95,8 @@ public class Building : MonoBehaviour
 
         foreach ( var res in needResForNext)
         {
-            currentID = res.Key; currentID = res.Value;
+            currentID = res.Key; currentValue = res.Value;
+            Debug.Log($"currentID={currentID}////currentValue={currentValue}");
 
             for ( var i = 0; i < resStorage.Count; i++)
             {
@@ -138,7 +144,7 @@ public class Building : MonoBehaviour
 
         foreach (var res in payingListRes)
         {
-            currentID = res.Key; currentID = res.Value;
+            currentID = res.Key; currentValue = res.Value;
 
             for (var i = 0; i < storage.Count; i++)
             {

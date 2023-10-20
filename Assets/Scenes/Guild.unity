@@ -2581,10 +2581,10 @@ MonoBehaviour:
   _currentStage: 1
   _timeForUpNextStage: 10
   _currentIcon: {fileID: 21300076, guid: 29c9cded5e558164aaf8c9bf08aa1510, type: 3}
-  _keysIdItem: 000000000200000003000000
-  _valueCountItem: 960000001400000028000000
+  _keysIdItem: 
+  _valueCountItem: 
   _dictionaryData: {fileID: 11400000, guid: da1265c3ae9d678418eb6029ecfafdd6, type: 2}
-  modifyValues: 0
+  modifyValues: 1
 --- !u!1 &856761076
 GameObject:
   m_ObjectHideFlags: 0
