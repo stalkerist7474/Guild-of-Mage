@@ -47,7 +47,7 @@ public class Stage : MonoBehaviour
 
             for (int i = 0; i < _dictionaryData.KeysIdItem.Count; i++)
             {
-                Debug.Log($"OnBeforeSerialize={_dictionaryData.KeysIdItem[i]}/{_dictionaryData.ValueCountItem[i]}");
+                //Debug.Log($"OnBeforeSerialize={_dictionaryData.KeysIdItem[i]}/{_dictionaryData.ValueCountItem[i]}");
 
                 _keysIdItem.Add(_dictionaryData.KeysIdItem[i]);
                 _valueCountItem.Add(_dictionaryData.ValueCountItem[i]);
