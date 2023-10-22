@@ -883,8 +883,6 @@ MonoBehaviour:
     DelayWave: 4
   _spawnPoint: {fileID: 465924724}
   _player: {fileID: 1118867847}
-  _dropRating: 2
-  item: {fileID: 11400000, guid: 31d518b8862652840a9cdf3270b77c29, type: 2}
   ResScoore: 0
 --- !u!1001 &73372501
 PrefabInstance:
