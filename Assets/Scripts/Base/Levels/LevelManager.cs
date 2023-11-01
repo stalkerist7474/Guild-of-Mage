@@ -35,11 +35,10 @@ public class LevelManager : MonoBehaviour
     }
 
 
+    //добавление кнопки в окно контента
     private void AddLevel(FightLevel level)
     {
         var view = Instantiate(_LevelTemplate, _itemContainer.transform);
-
-        //view.SellButtonClick += OnSellButtonClick;
 
         view.Render(level);
     }

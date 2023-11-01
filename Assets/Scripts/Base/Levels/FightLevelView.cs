@@ -22,27 +22,11 @@ public class FightLevelView : MonoBehaviour
 
     private Color _currentColorButton;
 
-    private void OnEnable()
-    {
-       // _button.onClick.AddListener(OnButtonClick());
-        
-    }
-
-    private void OnDisable()
-    {
-        //_button.onClick.RemoveListener(OnButtonClick());
-        
-    }
+    
 
 
-    //private void Start()
-    //{
-    //    _currentColorButton = _button.GetComponent<Image>().color;
-    //}
-
-
-
-    public void Render(FightLevel level)
+    //отрисовка и подстановка значений в шаблон кнопки уровня
+    public void Render(FightLevel level) 
     {
         
 
@@ -60,6 +44,7 @@ public class FightLevelView : MonoBehaviour
         }
     }
 
+    //функция для установки текущего уровня который будет запущен
     public void OnButtonClick()
     {
         if (_statusOpened)

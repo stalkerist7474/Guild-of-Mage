@@ -27,15 +27,15 @@ public class LevelChanger : MonoBehaviour
     //}
 
 
-    public void ChangeSceneToStart(FightLevel level)
-    {
-        if(level.StatusOpened)
-        {
-            LevelManager.sceneToStart = level.IdLevel.ToString();
+    //public void ChangeSceneToStart(FightLevel level)
+    //{
+    //    if(level.StatusOpened)
+    //    {
+    //        LevelManager.sceneToStart = level.IdLevel.ToString();
 
-        }
+    //    }
        
-    }
+    //}
 
 
 
