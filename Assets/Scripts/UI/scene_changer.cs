@@ -8,8 +8,8 @@ public class scene_changer : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
-    public void eewewe(GameObject gameObject)
+    public void Test(GameObject gameObject)
     {
-        Debug.Log("dwd");
+        Debug.Log("TestButton");
     }
 }

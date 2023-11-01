@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Spawner : MonoBehaviour
 {
@@ -23,6 +25,8 @@ public class Spawner : MonoBehaviour
     private int _numWaveOnThisLevel;
     private bool _waveComplete;
     private bool _waveAllEnemySpawned;
+
+    private string _nameLevel;
 
     //drop setting
 
@@ -54,7 +58,9 @@ public class Spawner : MonoBehaviour
 
     private void Start()
     {
-        
+        _nameLevel = SceneManager.GetActiveScene().name;
+        Debug.Log(_nameLevel);
+
         _numWaveOnThisLevel = _waves.Count;
         //Debug.Log($"_waves.Count{_waves.Count}");
         SetWave(_currentWaveNumber);
@@ -182,6 +188,7 @@ public class Spawner : MonoBehaviour
     {
         Debug.Log($"WINNER1");
         CalculatedDrop();
+        LevelManager.instance.CompleteLevel(_nameLevel);
         OnLevelWin?.Invoke();
         Debug.Log($"WINNER2");
     }
