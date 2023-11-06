@@ -5857,6 +5857,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 825044208}
+  - component: {fileID: 825044209}
   m_Layer: 5
   m_Name: 15min
   m_TagString: Untagged
@@ -5885,6 +5886,27 @@ RectTransform:
   m_AnchoredPosition: {x: -0.58, y: 115.8}
   m_SizeDelta: {x: 502.85, y: 78.4}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &825044209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825044207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d05e915890a834d98c59bf9adac4c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _building: {fileID: 1727890194}
+  _button: {fileID: 1747484948}
+  _name: 15
+  _icon: {fileID: 21300000, guid: 1245b59252108334181053c0a177020d, type: 3}
+  _countRes: 50
+  _timeNeedSec: 900
+  statusInProduction: 0
+  _countText: {fileID: 1528305331}
+  _iconRes: {fileID: 449675451}
 --- !u!1 &829656043
 GameObject:
   m_ObjectHideFlags: 0
@@ -5894,6 +5916,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 829656044}
+  - component: {fileID: 829656045}
   m_Layer: 5
   m_Name: 30min
   m_TagString: Untagged
@@ -5922,6 +5945,27 @@ RectTransform:
   m_AnchoredPosition: {x: -0.58, y: 42}
   m_SizeDelta: {x: 502.85, y: 78.4}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &829656045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829656043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d05e915890a834d98c59bf9adac4c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _building: {fileID: 1727890194}
+  _button: {fileID: 36916457}
+  _name: 30
+  _icon: {fileID: 21300000, guid: 1245b59252108334181053c0a177020d, type: 3}
+  _countRes: 80
+  _timeNeedSec: 1800
+  statusInProduction: 0
+  _countText: {fileID: 366269680}
+  _iconRes: {fileID: 1186176795}
 --- !u!1 &852888064 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4772472273997087165, guid: c7fe14357706ad142bb435a27930b53e,
@@ -9695,6 +9739,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1571755202}
+  - component: {fileID: 1571755203}
   m_Layer: 5
   m_Name: 4 hour
   m_TagString: Untagged
@@ -9723,6 +9768,27 @@ RectTransform:
   m_AnchoredPosition: {x: -0.58, y: -115}
   m_SizeDelta: {x: 502.85, y: 78.4}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1571755203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571755201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d05e915890a834d98c59bf9adac4c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _building: {fileID: 1727890194}
+  _button: {fileID: 475195728}
+  _name: 4h
+  _icon: {fileID: 21300000, guid: 1245b59252108334181053c0a177020d, type: 3}
+  _countRes: 600
+  _timeNeedSec: 14400
+  statusInProduction: 0
+  _countText: {fileID: 921627225}
+  _iconRes: {fileID: 991916909}
 --- !u!1 &1589494205
 GameObject:
   m_ObjectHideFlags: 0
@@ -9732,6 +9798,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1589494206}
+  - component: {fileID: 1589494207}
   m_Layer: 5
   m_Name: 1 hour
   m_TagString: Untagged
@@ -9760,6 +9827,27 @@ RectTransform:
   m_AnchoredPosition: {x: -0.58, y: -37}
   m_SizeDelta: {x: 502.85, y: 78.4}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1589494207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589494205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d05e915890a834d98c59bf9adac4c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _building: {fileID: 1727890194}
+  _button: {fileID: 657726994}
+  _name: 1h
+  _icon: {fileID: 21300000, guid: 1245b59252108334181053c0a177020d, type: 3}
+  _countRes: 150
+  _timeNeedSec: 3600
+  statusInProduction: 0
+  _countText: {fileID: 11484146}
+  _iconRes: {fileID: 396162701}
 --- !u!1 &1602928379
 GameObject:
   m_ObjectHideFlags: 0
@@ -9974,6 +10062,7 @@ MonoBehaviour:
   - 1
   - 2
   - 3
+  _listTask: []
 --- !u!1 &1728929434
 GameObject:
   m_ObjectHideFlags: 0
