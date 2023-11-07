@@ -8,61 +8,79 @@ using UnityEngine.UI;
 public class TaskManager : MonoBehaviour
 {
     public static TaskManager Instance;
-    [SerializeField] private List<TaskBuilding> _listTask; //—писок заданий на добычу
+    [SerializeField] private List<TaskBuilding> _listTaskWood; //—писок заданий на добычу
 
     public event UnityAction OnStartTask;
 
-    private void OnEnable()
+    //private void OnEnable()
+    //{
+    //    OnStartTask += OnClickTask; //—обытие на нажатие кнопки старта любого задани€
+
+    //    for (int i = 0; i < _listTask.Count; i++) //проставление слушател€ этого евента на все кнопки
+    //    {
+    //        _listTask[i]._button.onClick.AddListener(OnStartTask);
+    //    }
+
+    //}
+
+    //private void OnDisable()
+    //{
+    //    OnStartTask -= OnClickTask;
+    //    for (int i = 0; i < _listTask.Count; i++)
+    //    {
+    //        _listTask[i]._button.onClick.RemoveListener(OnStartTask);
+    //    }
+
+    //}
+    private void Awake()
     {
-        OnStartTask += OnClickTask; //—обытие на нажатие кнопки старта любого задани€
 
-        for (int i = 0; i < _listTask.Count; i++) //проставление слушател€ этого евента на все кнопки
+        if (!Instance)      //гаранти€ что экземпл€р будет один
         {
-            _listTask[i]._button.onClick.AddListener(OnStartTask);
+            Instance = this;
+            DontDestroyOnLoad(this);
         }
-        
-    }
-
-    private void OnDisable()
-    {
-        OnStartTask -= OnClickTask;
-        for (int i = 0; i < _listTask.Count; i++)
+        else
         {
-            _listTask[i]._button.onClick.RemoveListener(OnStartTask);
+            Destroy(gameObject);
         }
-        
-    }
 
+
+    }
 
     public void OnClickTask()
     {
         Debug.Log("1");
-        for (int i = 0; i < _listTask.Count; i++)
+        Debug.Log("1");
+        Debug.Log($"1_listTask.Count={_listTaskWood.Count}");
+        for (int i = 0; i < _listTaskWood.Count; i++)
         {
-            if (_listTask[i].statusInProduction)
+            if (_listTaskWood[i].statusInProduction)
             {
-                _listTask[i]._textButton.text = "in production";
-                _listTask[i]._button.interactable = false;
-                _listTask[i]._panelTask.color = Color.blue;
-                OnStartTask?.Invoke();
+                _listTaskWood[i]._textButton.text = "in production";
+                _listTaskWood[i]._button.interactable = false;
+                _listTaskWood[i]._panelTask.color = Color.blue;
+                Sawmill.Instance.StartProduction(_listTaskWood[i]._countRes, _listTaskWood[i]._timeNeedSec);
                 Debug.Log("2");
             }
-            else
+            if (_listTaskWood[i].statusInProduction == false)
             {
-                _listTask[i]._button.interactable = false;
+                _listTaskWood[i]._button.interactable = false;
                 Debug.Log("3");
             }
         }
+       // OnStartTask?.Invoke();
     }
 
     public void TaskComplete()
     {
-        for (int i = 0; i < _listTask.Count; i++)
+        for (int i = 0; i < _listTaskWood.Count; i++)
         {
 
-            _listTask[i].statusInProduction = false;
-            _listTask[i]._button.interactable = true;
-            _listTask[i]._button.name = "Start";
+            _listTaskWood[i].statusInProduction = false;
+            _listTaskWood[i]._button.interactable = true;
+            _listTaskWood[i]._panelTask.color = Color.green;
+            _listTaskWood[i]._textButton.text  = "Start";
             
             
         }

@@ -12,8 +12,8 @@ public class TaskBuilding : MonoBehaviour
     [SerializeField] public Image _panelTask;
     [SerializeField] private string _name;
     [SerializeField] private Sprite _icon;
-    [SerializeField] private int _countRes;
-    [SerializeField] private float _timeNeedSec;
+    [SerializeField] public int _countRes;
+    [SerializeField] public float _timeNeedSec;
     [SerializeField] public bool statusInProduction=false;
 
     [SerializeField] private TMP_Text _countText;
@@ -23,5 +23,11 @@ public class TaskBuilding : MonoBehaviour
     {
         _countText.text = _countRes.ToString();
         _iconRes.sprite = _icon;    
+    }
+
+    public void StartProduction() //функция для кнопки задания
+    {
+        statusInProduction = true;
+        
     }
 }

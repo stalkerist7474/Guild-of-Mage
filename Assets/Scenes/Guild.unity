@@ -473,7 +473,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 36916458}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 829656045}
+        m_TargetAssemblyTypeName: TaskBuilding, Assembly-CSharp
+        m_MethodName: StartProduction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1727890196}
+        m_TargetAssemblyTypeName: TaskManager, Assembly-CSharp
+        m_MethodName: OnClickTask
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &36916458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -566,7 +590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.516469, g: 0.8396226, b: 0.14653791, a: 1}
+  m_Color: {r: 0.22785416, g: 0.4245283, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4128,7 +4152,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 475195729}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1571755203}
+        m_TargetAssemblyTypeName: TaskBuilding, Assembly-CSharp
+        m_MethodName: StartProduction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1727890196}
+        m_TargetAssemblyTypeName: TaskManager, Assembly-CSharp
+        m_MethodName: OnClickTask
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &475195729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5102,7 +5150,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 657726995}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1589494207}
+        m_TargetAssemblyTypeName: TaskBuilding, Assembly-CSharp
+        m_MethodName: StartProduction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1727890196}
+        m_TargetAssemblyTypeName: TaskManager, Assembly-CSharp
+        m_MethodName: OnClickTask
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &657726995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5195,7 +5267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.516469, g: 0.8396226, b: 0.14653791, a: 1}
+  m_Color: {r: 0.22785416, g: 0.4245283, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5905,7 +5977,7 @@ MonoBehaviour:
   _name: 15
   _icon: {fileID: 21300000, guid: 1245b59252108334181053c0a177020d, type: 3}
   _countRes: 50
-  _timeNeedSec: 900
+  _timeNeedSec: 10
   statusInProduction: 0
   _countText: {fileID: 1528305331}
   _iconRes: {fileID: 449675451}
@@ -10043,6 +10115,7 @@ MonoBehaviour:
   - {fileID: 1637929645}
   - {fileID: 551654671}
   - {fileID: 895211399}
+  _currentStageId: 0
 --- !u!114 &1727890195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10059,18 +10132,11 @@ MonoBehaviour:
   _targetRes: {fileID: 11400000, guid: 799a59b898bbc25419b879baa2a30234, type: 2}
   _buildingCanvasGroup: {fileID: 599395704}
   _buildingButtonOpen: {fileID: 1769648157}
-  _delayProduction:
-  - 0
-  - 5
-  - 10
-  - 15
-  _baseValueProduction: 50
   _productionMultiply:
   - 0
   - 1
   - 2
   - 3
-  _listTask: []
 --- !u!114 &1727890196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10083,7 +10149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d9999e85e7a50141a0cfe8eb463e1f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _listTask:
+  _listTaskWood:
   - {fileID: 825044209}
   - {fileID: 829656045}
   - {fileID: 1589494207}
@@ -10292,7 +10358,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1747484949}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 825044209}
+        m_TargetAssemblyTypeName: TaskBuilding, Assembly-CSharp
+        m_MethodName: StartProduction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1727890196}
+        m_TargetAssemblyTypeName: TaskManager, Assembly-CSharp
+        m_MethodName: OnClickTask
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1747484949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10971,7 +11061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.516469, g: 0.8396226, b: 0.14653791, a: 1}
+  m_Color: {r: 0.22785416, g: 0.4245283, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11285,7 +11375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.516469, g: 0.8396226, b: 0.14653791, a: 1}
+  m_Color: {r: 0.22785416, g: 0.4245283, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

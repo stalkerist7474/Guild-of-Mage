@@ -9,6 +9,7 @@ using UnityEngine.InputSystem;
 
 public class Building : MonoBehaviour
 {
+    public static Building Instance;    
     [SerializeField] private string _titleBuilding;
     [SerializeField] private List<Stage> _stages = new List<Stage>();
 
@@ -18,11 +19,13 @@ public class Building : MonoBehaviour
     private Sprite _currentStageicon;
     private SpriteRenderer _icon;
     private Stage _currentStage;
-    
+    public int _currentStageId;
 
+    
     private void Awake()
     {
         _icon = GetComponent<SpriteRenderer>();
+        Instance = this;
        // _stages[0] = GetComponent<Stage>();
     }
 
@@ -46,12 +49,25 @@ public class Building : MonoBehaviour
                     _currentStageicon = stage._currentIcon;
                     _aboutBuildingStage = stage._nameStage;
 
+                    GetIndexStage();
+                    Debug.Log($"_currentStageId={_currentStageId}");
+
                     _icon.sprite = _currentStageicon;
                 }
             }
         }
     }
 
+    private void GetIndexStage()
+    {
+        for (int i = 0; i < _stages.Count; i++)
+        {
+            if (_stages[i]._currentStageBool)
+            {
+                _currentStageId = i;
+            }
+        }
+    }
 
 
     //метод улучшения здания
@@ -78,6 +94,8 @@ public class Building : MonoBehaviour
             _currentStageicon = _currentStage._currentIcon; //обновляем картинку
             _icon.sprite = _currentStageicon;
             _aboutBuildingStage = _currentStage._nameStage; //обновляем описание стадии здания
+
+            GetIndexStage();
 
             Debug.Log("UP2");
         }
