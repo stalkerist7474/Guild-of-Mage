@@ -5900,6 +5900,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _building: {fileID: 1727890194}
   _button: {fileID: 1747484948}
+  _textButton: {fileID: 1602928381}
+  _panelTask: {fileID: 1943977893}
   _name: 15
   _icon: {fileID: 21300000, guid: 1245b59252108334181053c0a177020d, type: 3}
   _countRes: 50
@@ -5959,6 +5961,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _building: {fileID: 1727890194}
   _button: {fileID: 36916457}
+  _textButton: {fileID: 1487035327}
+  _panelTask: {fileID: 2027473794}
   _name: 30
   _icon: {fileID: 21300000, guid: 1245b59252108334181053c0a177020d, type: 3}
   _countRes: 80
@@ -9782,6 +9786,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _building: {fileID: 1727890194}
   _button: {fileID: 475195728}
+  _textButton: {fileID: 1553358238}
+  _panelTask: {fileID: 74728803}
   _name: 4h
   _icon: {fileID: 21300000, guid: 1245b59252108334181053c0a177020d, type: 3}
   _countRes: 600
@@ -9841,6 +9847,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _building: {fileID: 1727890194}
   _button: {fileID: 657726994}
+  _textButton: {fileID: 1466729178}
+  _panelTask: {fileID: 677014382}
   _name: 1h
   _icon: {fileID: 21300000, guid: 1245b59252108334181053c0a177020d, type: 3}
   _countRes: 150
@@ -10063,6 +10071,23 @@ MonoBehaviour:
   - 2
   - 3
   _listTask: []
+--- !u!114 &1727890196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507464224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d9999e85e7a50141a0cfe8eb463e1f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _listTask:
+  - {fileID: 825044209}
+  - {fileID: 829656045}
+  - {fileID: 1589494207}
+  - {fileID: 1571755203}
 --- !u!1 &1728929434
 GameObject:
   m_ObjectHideFlags: 0
@@ -11952,6 +11977,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1727890195}
+    - targetCorrespondingSourceObject: {fileID: 3748544310463107447, guid: c7fe14357706ad142bb435a27930b53e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1727890196}
     - targetCorrespondingSourceObject: {fileID: 4772472273997087165, guid: c7fe14357706ad142bb435a27930b53e,
         type: 3}
       insertIndex: -1

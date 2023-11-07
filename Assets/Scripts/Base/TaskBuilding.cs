@@ -7,12 +7,14 @@ using UnityEngine.UI;
 public class TaskBuilding : MonoBehaviour
 {
     [SerializeField] private Building _building;
-    [SerializeField] private Button _button;
+    [SerializeField] public Button _button;
+    [SerializeField] public TMP_Text _textButton;
+    [SerializeField] public Image _panelTask;
     [SerializeField] private string _name;
     [SerializeField] private Sprite _icon;
     [SerializeField] private int _countRes;
     [SerializeField] private float _timeNeedSec;
-    [SerializeField] private bool statusInProduction=false;
+    [SerializeField] public bool statusInProduction=false;
 
     [SerializeField] private TMP_Text _countText;
     [SerializeField] private Image _iconRes;
