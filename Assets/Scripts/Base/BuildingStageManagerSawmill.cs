@@ -7,9 +7,9 @@ using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 
-public class Building : MonoBehaviour
+public class BuildingStageManagerSawmill : MonoBehaviour
 {
-    public static Building Instance;    
+    public static BuildingStageManagerSawmill Instance;    
     [SerializeField] private string _titleBuilding;
     [SerializeField] private List<Stage> _stages = new List<Stage>();
 

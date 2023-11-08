@@ -5,9 +5,9 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class TaskManager : MonoBehaviour
+public class TaskManagerWood : MonoBehaviour
 {
-    public static TaskManager Instance;
+    public static TaskManagerWood Instance;
     [SerializeField] private List<TaskBuilding> _listTaskWood; //Список заданий на добычу
 
     public event UnityAction OnStartTask;

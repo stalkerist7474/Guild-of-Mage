@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -8,15 +9,16 @@ using static System.Net.Mime.MediaTypeNames;
 public class Sawmill : MonoBehaviour
 {
     public static Sawmill Instance;
-    [SerializeField] private Building _building;
+    [SerializeField] private BuildingStageManagerSawmill _building;
     [SerializeField] private ItemRes _targetRes;
     [SerializeField] private CanvasGroup _buildingCanvasGroup; // Канвас здания с управлением
     [SerializeField] private Button _buildingButtonOpen; // Канвас здания с управлением
     //[SerializeField] private List<float> _delayProduction; //задержка в производстве 
     //[SerializeField] private int _baseValueProduction; //базовый уровень производства за одно отправление
     [SerializeField] private List<float> _productionMultiply; //коэффициент производства соответствует уровню здания
-   // [SerializeField] private List<TaskBuilding> _listTask; //Список заданий на добычу
-
+                                                              // [SerializeField] private List<TaskBuilding> _listTask; //Список заданий на добычу
+    [SerializeField] private GameObject _timer;
+    [SerializeField] private TimerUI _timerUI;
     private bool _makeResComplete = false; // Добыча ресурса завершена ли
     private bool _upgradeComplete = false; // Добыча ресурса завершена ли
 
@@ -58,7 +60,7 @@ public class Sawmill : MonoBehaviour
 
     private void Start()
     {
-        _building = GetComponent<Building>();
+        _building = GetComponent<BuildingStageManagerSawmill>();
        
     }
     
@@ -74,6 +76,7 @@ public class Sawmill : MonoBehaviour
         {
             ProductionComplete();
             _makeResComplete = false;
+            StopTimer();
             return;
         }
         
@@ -97,19 +100,19 @@ public class Sawmill : MonoBehaviour
     {
         InventoryBase.instance.AddItemRes(_targetRes.ID, _countResInProduction);
         _countResInProduction = 0;
-        TaskManager.Instance.TaskComplete();
+        TaskManagerWood.Instance.TaskComplete();
     }
 
     public void StartProduction(int count, float timeDelay)
     {
-        if (Building.Instance._currentStageId == 0) 
+        if (BuildingStageManagerSawmill.Instance._currentStageId == 0) 
         {
             Debug.Log("Stage 0 not production res");
             return;
         }
         for (int i = 0; i < _productionMultiply.Count; i++)
         {
-            if( Building.Instance._currentStageId == _productionMultiply[Building.Instance._currentStageId])
+            if( BuildingStageManagerSawmill.Instance._currentStageId == _productionMultiply[BuildingStageManagerSawmill.Instance._currentStageId])
             {
                 _countResInProduction = (int)System.Math.Round(count * _productionMultiply[i]);
             }
@@ -118,7 +121,7 @@ public class Sawmill : MonoBehaviour
         
         
         Invoke("Production", timeDelay);//вызываем задежку
-        
+        Start(timeDelay);
 
         
     }
@@ -129,6 +132,50 @@ public class Sawmill : MonoBehaviour
         OnProductionComplete?.Invoke();
     }
 
-    
-    
+    //private void StartTimer(float time)
+    //{
+    //    var timer = new TimerUI();
+    //    timer = _timer.GetComponent<TimerUI>();
+    //    _timer.GetComponent<CanvasGroup>().alpha = 1;
+    //    _timer.GetComponent<TimerUI>().Start(time);
+    //}
+
+    private float time;
+    private float _timeLeft = 0f;
+
+    private IEnumerator StartTimer()
+    {
+        while (_timeLeft > 0)
+        {
+            _timeLeft -= Time.deltaTime;
+            UpdateTimeText();
+            yield return null;
+        }
+    }
+
+    public void Start(float time)
+    {
+        _timeLeft = time;
+        _timer.GetComponent<CanvasGroup>().alpha = 1;
+        StartCoroutine(StartTimer());
+    }
+    public void StopTimer()
+    {
+        
+        _timer.GetComponent<CanvasGroup>().alpha = 0;
+        StopCoroutine(StartTimer());
+        
+    }
+
+    private void UpdateTimeText()
+    {
+        if (_timeLeft < 0)
+            _timeLeft = 0;
+
+        float minutes = Mathf.FloorToInt(_timeLeft / 60);
+        float seconds = Mathf.FloorToInt(_timeLeft % 60);
+        _timer.GetComponent<TimerUI>()._timeInfo.text = string.Format("{0:00} : {1:00}", minutes, seconds);
+        
+    }
+
 }

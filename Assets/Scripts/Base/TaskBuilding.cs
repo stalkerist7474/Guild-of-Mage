@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class TaskBuilding : MonoBehaviour
 {
-    [SerializeField] private Building _building;
+    [SerializeField] private BuildingStageManagerSawmill _building;
     [SerializeField] public Button _button;
     [SerializeField] public TMP_Text _textButton;
     [SerializeField] public Image _panelTask;
