@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class BuildingStageManagerFarm : MonoBehaviour
+public class BuildingStageManagerMine : MonoBehaviour
 {
-    public static BuildingStageManagerFarm Instance;
+    public static BuildingStageManagerMine Instance;
     [SerializeField] private string _titleBuilding;
     [SerializeField] private List<Stage> _stages = new List<Stage>();
 

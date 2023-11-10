@@ -26,7 +26,7 @@ public class Sawmill : MonoBehaviour
 
 
     public event UnityAction OnProductionComplete;
-    public event UnityAction OnClickBuilding;
+    public event UnityAction OnClickBuildingSawmill;
 
     private void Awake()
     {
@@ -46,15 +46,15 @@ public class Sawmill : MonoBehaviour
 
     private void OnEnable()
     {
-        OnClickBuilding += onOpenClickBuilding;
+        OnClickBuildingSawmill += onOpenClickBuildingSawmill;
         
-        _buildingButtonOpen.onClick.AddListener(OnClickBuilding);
+        _buildingButtonOpen.onClick.AddListener(OnClickBuildingSawmill);
     }
 
     private void OnDisable()
     {
-        OnClickBuilding -= onOpenClickBuilding;
-        _buildingButtonOpen.onClick.RemoveListener(OnClickBuilding);
+        OnClickBuildingSawmill -= onOpenClickBuildingSawmill;
+        _buildingButtonOpen.onClick.RemoveListener(OnClickBuildingSawmill);
     }
 
 
@@ -64,7 +64,7 @@ public class Sawmill : MonoBehaviour
        
     }
     
-    public void onOpenClickBuilding()
+    public void onOpenClickBuildingSawmill()
     {
         if (_upgradeComplete) //если готово улучшение
         {
@@ -98,6 +98,8 @@ public class Sawmill : MonoBehaviour
     }
     private void ProductionComplete()
     {
+
+        Debug.Log($"_countResInProduction ADD = {_countResInProduction}");
         InventoryBase.instance.AddItemRes(_targetRes.ID, _countResInProduction);
         _countResInProduction = 0;
         TaskManagerWood.Instance.TaskComplete();
@@ -112,7 +114,7 @@ public class Sawmill : MonoBehaviour
         }
         for (int i = 0; i < _productionMultiply.Count; i++)
         {
-            if( BuildingStageManagerSawmill.Instance._currentStageId == _productionMultiply[BuildingStageManagerSawmill.Instance._currentStageId])
+            if( BuildingStageManagerSawmill.Instance._currentStageId == _productionMultiply[i])
             {
                 _countResInProduction = (int)System.Math.Round(count * _productionMultiply[i]);
             }
@@ -121,7 +123,7 @@ public class Sawmill : MonoBehaviour
         
         
         Invoke("Production", timeDelay);//вызываем задежку
-        Start(timeDelay);
+        StartTimer(timeDelay);
 
         
     }
@@ -143,7 +145,7 @@ public class Sawmill : MonoBehaviour
     private float time;
     private float _timeLeft = 0f;
 
-    private IEnumerator StartTimer()
+    private IEnumerator StartTimerCor()
     {
         while (_timeLeft > 0)
         {
@@ -153,17 +155,17 @@ public class Sawmill : MonoBehaviour
         }
     }
 
-    public void Start(float time)
+    public void StartTimer(float time)
     {
         _timeLeft = time;
         _timer.GetComponent<CanvasGroup>().alpha = 1;
-        StartCoroutine(StartTimer());
+        StartCoroutine(StartTimerCor());
     }
     public void StopTimer()
     {
         
         _timer.GetComponent<CanvasGroup>().alpha = 0;
-        StopCoroutine(StartTimer());
+        StopCoroutine(StartTimerCor());
         
     }
 

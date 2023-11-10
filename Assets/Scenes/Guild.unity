@@ -696,8 +696,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4052055635738500018}
-        m_TargetAssemblyTypeName: TaskManager, Assembly-CSharp
+      - m_Target: {fileID: 982136558}
+        m_TargetAssemblyTypeName: TaskManagerFood, Assembly-CSharp
         m_MethodName: OnClickTask
         m_Mode: 1
         m_Arguments:
@@ -790,7 +790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d89d221c74b0e43ab934d2562850e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nameBuilding: "\u041B\u0435\u0441\u043E\u043F\u0438\u043B\u043A\u0430"
+  _nameBuilding: "\u0424\u0435\u0440\u043C\u0430"
   _nameStage: Level 1
   _nextStage: {fileID: 252607281}
   _statusStageBool: 0
@@ -1109,8 +1109,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4052055635738500018}
-        m_TargetAssemblyTypeName: TaskManager, Assembly-CSharp
+      - m_Target: {fileID: 2015899344}
+        m_TargetAssemblyTypeName: TaskManagerRock, Assembly-CSharp
         m_MethodName: OnClickTask
         m_Mode: 1
         m_Arguments:
@@ -1646,8 +1646,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4052055635738500018}
-        m_TargetAssemblyTypeName: TaskManager, Assembly-CSharp
+      - m_Target: {fileID: 982136558}
+        m_TargetAssemblyTypeName: TaskManagerFood, Assembly-CSharp
         m_MethodName: OnClickTask
         m_Mode: 1
         m_Arguments:
@@ -2308,8 +2308,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4052055635738500018}
-        m_TargetAssemblyTypeName: TaskManager, Assembly-CSharp
+      - m_Target: {fileID: 2015899344}
+        m_TargetAssemblyTypeName: TaskManagerRock, Assembly-CSharp
         m_MethodName: OnClickTask
         m_Mode: 1
         m_Arguments:
@@ -2594,7 +2594,7 @@ CanvasGroup:
   m_Enabled: 1
   m_Alpha: 0
   m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!224 &228556411
 RectTransform:
@@ -2780,8 +2780,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1752754851}
+  m_Children: []
   m_Father: {fileID: 563796302}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3139,7 +3138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d89d221c74b0e43ab934d2562850e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nameBuilding: "\u041B\u0435\u0441\u043E\u043F\u0438\u043B\u043A\u0430"
+  _nameBuilding: "\u0424\u0435\u0440\u043C\u0430"
   _nameStage: level 2
   _nextStage: {fileID: 1691919640}
   _statusStageBool: 0
@@ -6282,12 +6281,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d05e915890a834d98c59bf9adac4c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _building: {fileID: 8638691988294833848}
   _button: {fileID: 792943210}
   _textButton: {fileID: 932531504}
   _panelTask: {fileID: 1241898419}
   _name: 4h
-  _icon: {fileID: 21300000, guid: 1245b59252108334181053c0a177020d, type: 3}
+  _icon: {fileID: 21300000, guid: 378bd9bd69748c34daaf54306d0d70ee, type: 3}
   _countRes: 600
   _timeNeedSec: 14400
   statusInProduction: 0
@@ -6899,7 +6897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d89d221c74b0e43ab934d2562850e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nameBuilding: "\u041B\u0435\u0441\u043E\u043F\u0438\u043B\u043A\u0430"
+  _nameBuilding: "\u0424\u0435\u0440\u043C\u0430"
   _nameStage: not
   _nextStage: {fileID: 71028081}
   _statusStageBool: 1
@@ -8176,7 +8174,7 @@ CanvasGroup:
   m_Enabled: 1
   m_Alpha: 0
   m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!1 &616242805
 GameObject:
@@ -8228,12 +8226,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d05e915890a834d98c59bf9adac4c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _building: {fileID: 8638691988294833848}
   _button: {fileID: 93943974}
   _textButton: {fileID: 838833466}
   _panelTask: {fileID: 1844810564}
   _name: 15
-  _icon: {fileID: 21300000, guid: 1245b59252108334181053c0a177020d, type: 3}
+  _icon: {fileID: 21300000, guid: 378bd9bd69748c34daaf54306d0d70ee, type: 3}
   _countRes: 50
   _timeNeedSec: 10
   statusInProduction: 0
@@ -8503,7 +8500,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sawmill
+  m_text: Mine
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8888,8 +8885,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4052055635738500018}
-        m_TargetAssemblyTypeName: TaskManager, Assembly-CSharp
+      - m_Target: {fileID: 982136558}
+        m_TargetAssemblyTypeName: TaskManagerFood, Assembly-CSharp
         m_MethodName: OnClickTask
         m_Mode: 1
         m_Arguments:
@@ -9122,7 +9119,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d05e915890a834d98c59bf9adac4c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _building: {fileID: 982136554}
   _button: {fileID: 117347839}
   _textButton: {fileID: 1321037267}
   _panelTask: {fileID: 1351529423}
@@ -9190,7 +9186,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Wood
+  m_text: Rock
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9319,6 +9315,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 31d518b8862652840a9cdf3270b77c29, type: 2}
   - {fileID: 11400000, guid: 42f6d1f802a82144a89c60d9276b7c41, type: 2}
   - {fileID: 11400000, guid: 799a59b898bbc25419b879baa2a30234, type: 2}
+  - {fileID: 11400000, guid: 910402decbe06134f9905f4f79099d28, type: 2}
   _moneyTemplate: {fileID: 11400000, guid: 31d518b8862652840a9cdf3270b77c29, type: 2}
 --- !u!1001 &731422544
 PrefabInstance:
@@ -9863,7 +9860,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_TargetDisplay: 0
 --- !u!224 &765217846
 RectTransform:
@@ -9877,9 +9874,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 228556411}
-  - {fileID: 1890675623}
   - {fileID: 599395703}
+  - {fileID: 1890675623}
+  - {fileID: 228556411}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -10106,8 +10103,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4052055635738500018}
-        m_TargetAssemblyTypeName: TaskManager, Assembly-CSharp
+      - m_Target: {fileID: 2015899344}
+        m_TargetAssemblyTypeName: TaskManagerRock, Assembly-CSharp
         m_MethodName: OnClickTask
         m_Mode: 1
         m_Arguments:
@@ -10340,7 +10337,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d05e915890a834d98c59bf9adac4c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _building: {fileID: 8638691988294833848}
   _button: {fileID: 1747484948}
   _textButton: {fileID: 1602928381}
   _panelTask: {fileID: 1943977893}
@@ -10401,7 +10397,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d05e915890a834d98c59bf9adac4c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _building: {fileID: 8638691988294833848}
   _button: {fileID: 36916457}
   _textButton: {fileID: 1487035327}
   _panelTask: {fileID: 2027473794}
@@ -10442,8 +10437,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1996724190}
+  m_Children: []
   m_Father: {fileID: 1164661397}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -11167,12 +11161,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d05e915890a834d98c59bf9adac4c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _building: {fileID: 8638691988294833848}
   _button: {fileID: 194777840}
   _textButton: {fileID: 810694087}
   _panelTask: {fileID: 1161764908}
   _name: 30
-  _icon: {fileID: 21300000, guid: 1245b59252108334181053c0a177020d, type: 3}
+  _icon: {fileID: 21300000, guid: 378bd9bd69748c34daaf54306d0d70ee, type: 3}
   _countRes: 80
   _timeNeedSec: 1800
   statusInProduction: 0
@@ -12527,9 +12520,9 @@ GameObject:
   m_Component:
   - component: {fileID: 982136551}
   - component: {fileID: 982136555}
-  - component: {fileID: 982136554}
-  - component: {fileID: 982136553}
-  - component: {fileID: 982136552}
+  - component: {fileID: 982136557}
+  - component: {fileID: 982136556}
+  - component: {fileID: 982136558}
   m_Layer: 20
   m_Name: Farm
   m_TagString: Untagged
@@ -12557,65 +12550,6 @@ Transform:
   - {fileID: 1164661397}
   m_Father: {fileID: 1964111469}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &982136552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 982136550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d9999e85e7a50141a0cfe8eb463e1f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _listTaskWood:
-  - {fileID: 1534491677}
-  - {fileID: 687234529}
-  - {fileID: 1194176978}
-  - {fileID: 1412075365}
---- !u!114 &982136553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 982136550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 942027bf3d07792418d7ad37e324d21b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _building: {fileID: 982136554}
-  _targetRes: {fileID: 11400000, guid: 910402decbe06134f9905f4f79099d28, type: 2}
-  _buildingCanvasGroup: {fileID: 1890675624}
-  _buildingButtonOpen: {fileID: 838293818}
-  _productionMultiply:
-  - 0
-  - 1
-  - 2
-  - 3
-  _timer: {fileID: 1727589714}
-  _timerUI: {fileID: 0}
---- !u!114 &982136554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 982136550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04df6ce574e87fc478d6638acd690f3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _titleBuilding: "\u0424\u0435\u0440\u043C\u0430"
-  _stages:
-  - {fileID: 459002000}
-  - {fileID: 71028081}
-  - {fileID: 252607281}
-  - {fileID: 1691919640}
-  _currentStageId: 0
 --- !u!212 &982136555
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12668,6 +12602,65 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &982136556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982136550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26aaae806dadcf442a9dd9ca77ebd768, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _titleBuilding: "\u0424\u0435\u0440\u043C\u0430"
+  _stages:
+  - {fileID: 459002000}
+  - {fileID: 71028081}
+  - {fileID: 252607281}
+  - {fileID: 1691919640}
+  _currentStageId: 0
+--- !u!114 &982136557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982136550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33588f9177ccf924f94ef8245b04820f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _building: {fileID: 982136556}
+  _targetRes: {fileID: 11400000, guid: 910402decbe06134f9905f4f79099d28, type: 2}
+  _buildingCanvasGroup: {fileID: 1890675624}
+  _buildingButtonOpen: {fileID: 838293818}
+  _productionMultiply:
+  - 0
+  - 1
+  - 2
+  - 3
+  _timer: {fileID: 1727589714}
+  _timerUI: {fileID: 0}
+--- !u!114 &982136558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982136550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a6860a45eb171e48988a8e6b4eca4e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _listTaskFood:
+  - {fileID: 1534491677}
+  - {fileID: 687234529}
+  - {fileID: 1194176978}
+  - {fileID: 1412075365}
 --- !u!1 &987509686
 GameObject:
   m_ObjectHideFlags: 0
@@ -12763,8 +12756,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4052055635738500018}
-        m_TargetAssemblyTypeName: TaskManager, Assembly-CSharp
+      - m_Target: {fileID: 982136558}
+        m_TargetAssemblyTypeName: TaskManagerFood, Assembly-CSharp
         m_MethodName: OnClickTask
         m_Mode: 1
         m_Arguments:
@@ -13141,7 +13134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d89d221c74b0e43ab934d2562850e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nameBuilding: "\u041B\u0435\u0441\u043E\u043F\u0438\u043B\u043A\u0430"
+  _nameBuilding: "\u041A\u0430\u043C\u0435\u043D\u043E\u043B\u043E\u043C\u043D\u044F"
   _nameStage: not
   _nextStage: {fileID: 1283110282}
   _statusStageBool: 1
@@ -13150,7 +13143,7 @@ MonoBehaviour:
   _currentIcon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   _keysIdItem: 
   _valueCountItem: 
-  _dictionaryData: {fileID: 11400000, guid: da1265c3ae9d678418eb6029ecfafdd6, type: 2}
+  _dictionaryData: {fileID: 11400000, guid: c65760b40efcb244c99e8bb28ab89036, type: 2}
   OnThisStage: 1
 --- !u!1 &1015557291
 GameObject:
@@ -13209,7 +13202,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Wood
+  m_text: Rock
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14591,8 +14584,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4052055635738500018}
-        m_TargetAssemblyTypeName: TaskManager, Assembly-CSharp
+      - m_Target: {fileID: 2015899344}
+        m_TargetAssemblyTypeName: TaskManagerRock, Assembly-CSharp
         m_MethodName: OnClickTask
         m_Mode: 1
         m_Arguments:
@@ -15157,7 +15150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d05e915890a834d98c59bf9adac4c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _building: {fileID: 982136554}
   _button: {fileID: 683859971}
   _textButton: {fileID: 1234132502}
   _panelTask: {fileID: 1414890965}
@@ -16379,7 +16371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d89d221c74b0e43ab934d2562850e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nameBuilding: "\u041B\u0435\u0441\u043E\u043F\u0438\u043B\u043A\u0430"
+  _nameBuilding: "\u041A\u0430\u043C\u0435\u043D\u043E\u043B\u043E\u043C\u043D\u044F"
   _nameStage: Level 1
   _nextStage: {fileID: 2090913702}
   _statusStageBool: 0
@@ -16388,7 +16380,7 @@ MonoBehaviour:
   _currentIcon: {fileID: 1454536317, guid: 1878558f869cd8348bae0c85368df6b5, type: 3}
   _keysIdItem: 000000000200000003000000
   _valueCountItem: 2c0100001400000014000000
-  _dictionaryData: {fileID: 11400000, guid: 3a0be7f48077944449511845df58537b, type: 2}
+  _dictionaryData: {fileID: 11400000, guid: d9b21aea76085e3448ae35d805cc61fb, type: 2}
   OnThisStage: 1
 --- !u!1 &1320617961
 GameObject:
@@ -17199,7 +17191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d89d221c74b0e43ab934d2562850e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nameBuilding: "\u041B\u0435\u0441\u043E\u043F\u0438\u043B\u043A\u0430"
+  _nameBuilding: "\u041A\u0430\u043C\u0435\u043D\u043E\u043B\u043E\u043C\u043D\u044F"
   _nameStage: level 3
   _nextStage: {fileID: 0}
   _statusStageBool: 0
@@ -17208,7 +17200,7 @@ MonoBehaviour:
   _currentIcon: {fileID: 835577424, guid: 1878558f869cd8348bae0c85368df6b5, type: 3}
   _keysIdItem: 00000000
   _valueCountItem: 90010000
-  _dictionaryData: {fileID: 11400000, guid: ee4575c74f482e543b5e907e8be63c0f, type: 2}
+  _dictionaryData: {fileID: 11400000, guid: e801cb31493c2714ebcc6a23032c3016, type: 2}
   OnThisStage: 1
 --- !u!1 &1409787890
 GameObject:
@@ -17494,7 +17486,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d05e915890a834d98c59bf9adac4c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _building: {fileID: 982136554}
   _button: {fileID: 47179334}
   _textButton: {fileID: 1631221211}
   _panelTask: {fileID: 159060579}
@@ -19056,7 +19047,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d05e915890a834d98c59bf9adac4c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _building: {fileID: 982136554}
   _button: {fileID: 987509688}
   _textButton: {fileID: 1422533641}
   _panelTask: {fileID: 1373164829}
@@ -19336,8 +19326,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8638691988294833848}
-        m_TargetAssemblyTypeName: Building, Assembly-CSharp
+      - m_Target: {fileID: 982136556}
+        m_TargetAssemblyTypeName: BuildingStageManagerFarm, Assembly-CSharp
         m_MethodName: TryImproveBuilding
         m_Mode: 1
         m_Arguments:
@@ -19544,7 +19534,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d05e915890a834d98c59bf9adac4c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _building: {fileID: 8638691988294833848}
   _button: {fileID: 475195728}
   _textButton: {fileID: 1553358238}
   _panelTask: {fileID: 74728803}
@@ -19682,7 +19671,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d05e915890a834d98c59bf9adac4c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _building: {fileID: 8638691988294833848}
   _button: {fileID: 657726994}
   _textButton: {fileID: 1466729178}
   _panelTask: {fileID: 677014382}
@@ -19877,12 +19865,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d05e915890a834d98c59bf9adac4c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _building: {fileID: 8638691988294833848}
   _button: {fileID: 1129655159}
   _textButton: {fileID: 361568794}
   _panelTask: {fileID: 1523854653}
   _name: 1h
-  _icon: {fileID: 21300000, guid: 1245b59252108334181053c0a177020d, type: 3}
+  _icon: {fileID: 21300000, guid: 378bd9bd69748c34daaf54306d0d70ee, type: 3}
   _countRes: 150
   _timeNeedSec: 3600
   statusInProduction: 0
@@ -20212,7 +20199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d89d221c74b0e43ab934d2562850e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nameBuilding: "\u041B\u0435\u0441\u043E\u043F\u0438\u043B\u043A\u0430"
+  _nameBuilding: "\u0424\u0435\u0440\u043C\u0430"
   _nameStage: level 3
   _nextStage: {fileID: 0}
   _statusStageBool: 0
@@ -20702,7 +20689,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Wood
+  m_text: Rock
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -21110,140 +21097,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1747484946}
-  m_CullTransparentMesh: 1
---- !u!1 &1752754850
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1752754851}
-  - component: {fileID: 1752754853}
-  - component: {fileID: 1752754852}
-  m_Layer: 5
-  m_Name: Text (TMP)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1752754851
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1752754850}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 232241080}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1752754852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1752754850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: Button
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 1
-  m_fontSizeBase: 1
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1752754853
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1752754850}
   m_CullTransparentMesh: 1
 --- !u!1 &1787022695
 GameObject:
@@ -21692,10 +21545,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sawmill
       objectReference: {fileID: 0}
+    - target: {fileID: 63184248471235110, guid: edf268db6d736744fbe6ef09f39a62e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1603904321192322979, guid: edf268db6d736744fbe6ef09f39a62e9,
         type: 3}
       propertyPath: m_text
-      value: 
+      value: "\u041B\u0435\u0441"
       objectReference: {fileID: 0}
     - target: {fileID: 3535606072630120143, guid: edf268db6d736744fbe6ef09f39a62e9,
         type: 3}
@@ -21747,6 +21605,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4479022369653119276, guid: edf268db6d736744fbe6ef09f39a62e9,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6906642277873073120, guid: edf268db6d736744fbe6ef09f39a62e9,
         type: 3}
       propertyPath: _buildingCanvasGroup
@@ -21773,7 +21636,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1571755203}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6124254929459372200, guid: edf268db6d736744fbe6ef09f39a62e9, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edf268db6d736744fbe6ef09f39a62e9, type: 3}
@@ -21913,7 +21777,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Wood
+  m_text: Rock
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -22158,7 +22022,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000015259, y: -0.000015259}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 550, y: 550}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1890675624
@@ -22171,7 +22035,7 @@ CanvasGroup:
   m_Enabled: 1
   m_Alpha: 0
   m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!1 &1909210715
 GameObject:
@@ -22940,140 +22804,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 8372781498829430413}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1996724189
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1996724190}
-  - component: {fileID: 1996724192}
-  - component: {fileID: 1996724191}
-  m_Layer: 5
-  m_Name: Text (TMP)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1996724190
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1996724189}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 838293817}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1996724191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1996724189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: Button
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 1
-  m_fontSizeBase: 1
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1996724192
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1996724189}
-  m_CullTransparentMesh: 1
 --- !u!1 &2015899338
 GameObject:
   m_ObjectHideFlags: 0
@@ -23084,9 +22814,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2015899339}
   - component: {fileID: 2015899343}
-  - component: {fileID: 2015899342}
-  - component: {fileID: 2015899341}
-  - component: {fileID: 2015899340}
+  - component: {fileID: 2015899346}
+  - component: {fileID: 2015899345}
+  - component: {fileID: 2015899344}
   m_Layer: 20
   m_Name: Mine
   m_TagString: Untagged
@@ -23114,65 +22844,6 @@ Transform:
   - {fileID: 563796302}
   m_Father: {fileID: 1964111469}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2015899340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2015899338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d9999e85e7a50141a0cfe8eb463e1f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _listTaskWood:
-  - {fileID: 825044209}
-  - {fileID: 829656045}
-  - {fileID: 1589494207}
-  - {fileID: 1571755203}
---- !u!114 &2015899341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2015899338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 942027bf3d07792418d7ad37e324d21b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _building: {fileID: 2015899342}
-  _targetRes: {fileID: 11400000, guid: 799a59b898bbc25419b879baa2a30234, type: 2}
-  _buildingCanvasGroup: {fileID: 599395704}
-  _buildingButtonOpen: {fileID: 232241081}
-  _productionMultiply:
-  - 0
-  - 1
-  - 2
-  - 3
-  _timer: {fileID: 1512381923}
-  _timerUI: {fileID: 0}
---- !u!114 &2015899342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2015899338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04df6ce574e87fc478d6638acd690f3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _titleBuilding: "\u041B\u0435\u0441\u043E\u043F\u0438\u043B\u043A\u0430"
-  _stages:
-  - {fileID: 1004363261}
-  - {fileID: 1283110282}
-  - {fileID: 2090913702}
-  - {fileID: 1394741914}
-  _currentStageId: 0
 --- !u!212 &2015899343
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23225,6 +22896,65 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2015899344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015899338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6437fb154eda74daf0a844a637fee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _listTaskRock:
+  - {fileID: 616242807}
+  - {fileID: 891370781}
+  - {fileID: 1611967803}
+  - {fileID: 401166887}
+--- !u!114 &2015899345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015899338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97ae69f76406b61498d0001c6df04ca3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _titleBuilding: "\u041A\u0430\u043C\u0435\u043D\u043E\u043B\u043E\u043C\u043D\u044F"
+  _stages:
+  - {fileID: 1004363261}
+  - {fileID: 1283110282}
+  - {fileID: 2090913702}
+  - {fileID: 1394741914}
+  _currentStageId: 0
+--- !u!114 &2015899346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015899338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e55ba054e589f547b9562ce6bf9e638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _building: {fileID: 2015899345}
+  _targetRes: {fileID: 11400000, guid: 42f6d1f802a82144a89c60d9276b7c41, type: 2}
+  _buildingCanvasGroup: {fileID: 228556410}
+  _buildingButtonOpen: {fileID: 232241081}
+  _productionMultiply:
+  - 0
+  - 1
+  - 2
+  - 3
+  _timer: {fileID: 1512381923}
+  _timerUI: {fileID: 0}
 --- !u!1 &2027473792
 GameObject:
   m_ObjectHideFlags: 0
@@ -23810,7 +23540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d89d221c74b0e43ab934d2562850e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nameBuilding: "\u041B\u0435\u0441\u043E\u043F\u0438\u043B\u043A\u0430"
+  _nameBuilding: "\u041A\u0430\u043C\u0435\u043D\u043E\u043B\u043E\u043C\u043D\u044F"
   _nameStage: level 2
   _nextStage: {fileID: 1394741914}
   _statusStageBool: 0
@@ -23819,7 +23549,7 @@ MonoBehaviour:
   _currentIcon: {fileID: 858910927, guid: 1878558f869cd8348bae0c85368df6b5, type: 3}
   _keysIdItem: 00000000
   _valueCountItem: 2c010000
-  _dictionaryData: {fileID: 11400000, guid: 6e9b71cffbba812469a3dffe6d116740, type: 2}
+  _dictionaryData: {fileID: 11400000, guid: 5cf6b69c6ac2f134eb37ed360dccd5a4, type: 2}
   OnThisStage: 1
 --- !u!1 &2106062909
 GameObject:
@@ -23904,8 +23634,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8638691988294833848}
-        m_TargetAssemblyTypeName: Building, Assembly-CSharp
+      - m_Target: {fileID: 2015899345}
+        m_TargetAssemblyTypeName: BuildingStageManagerMine, Assembly-CSharp
         m_MethodName: TryImproveBuilding
         m_Mode: 1
         m_Arguments:

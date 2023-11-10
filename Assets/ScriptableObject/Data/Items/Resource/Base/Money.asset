@@ -17,6 +17,6 @@ MonoBehaviour:
   Description: Money
   Rarity: 00000000
   Icon: {fileID: 21300000, guid: a0aaf10996946cf46bcec667910e3d39, type: 3}
-  Count: 55
+  Count: 766
   SellPrice: 1
   ScoorePrice: 2
