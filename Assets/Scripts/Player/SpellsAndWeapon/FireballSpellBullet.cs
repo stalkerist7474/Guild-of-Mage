@@ -31,7 +31,7 @@ public class FireballSpellBullet : SpellBullet
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision) //Ёффект от попадани€ в цель
     {
         if (collision.gameObject.TryGetComponent(out Enemy enemy))
         {
@@ -41,7 +41,7 @@ public class FireballSpellBullet : SpellBullet
         }
     }
 
-    private GameObject GetCurrentEnemy()
+    private GameObject GetCurrentEnemy() // получение цели
     {
         GameObject go = GameObject.Find("Player");
         Player player = go.GetComponent<Player>();
