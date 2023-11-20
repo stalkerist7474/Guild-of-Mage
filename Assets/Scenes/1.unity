@@ -10942,7 +10942,7 @@ MonoBehaviour:
   _spells:
   - {fileID: 6208341215140126755, guid: b4024ac4b6f00804198fddd611ce1b78, type: 3}
   _shootpoint: {fileID: 1992762436}
-  _areaAttack: 5
+  _areaAttack: 7
   _currentEnemyToAttack: {fileID: 0}
   _needExpForUp: 10
   EnemysInAttackCircle: []
@@ -30177,7 +30177,7 @@ PrefabInstance:
     - target: {fileID: 8369179951326898237, guid: 50cfd7ac8b029fe48b3693db97178e04,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8369179951326898237, guid: 50cfd7ac8b029fe48b3693db97178e04,
         type: 3}
@@ -30187,7 +30187,7 @@ PrefabInstance:
     - target: {fileID: 8369179951326898237, guid: 50cfd7ac8b029fe48b3693db97178e04,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8369179951326898237, guid: 50cfd7ac8b029fe48b3693db97178e04,
         type: 3}
@@ -30237,12 +30237,12 @@ PrefabInstance:
     - target: {fileID: 8369179951326898237, guid: 50cfd7ac8b029fe48b3693db97178e04,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 224.44
       objectReference: {fileID: 0}
     - target: {fileID: 8369179951326898237, guid: 50cfd7ac8b029fe48b3693db97178e04,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -256.02002
       objectReference: {fileID: 0}
     - target: {fileID: 8369179951326898237, guid: 50cfd7ac8b029fe48b3693db97178e04,
         type: 3}

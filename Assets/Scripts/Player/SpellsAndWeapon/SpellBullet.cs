@@ -7,9 +7,10 @@ public abstract class SpellBullet : MonoBehaviour
     [SerializeField] private string _label;
     [SerializeField] private int _damage;
     [SerializeField] private float _speed;
-    [SerializeField] private float _flightBulletRange = 500f;
+    [SerializeField] private float _flightBulletRange = 6f;
     [SerializeField] private Dictionary<ParticleSystem, GameObject> _particlesBullet;
-    
+    [SerializeField] private GameObject _hitEffect;
+
     private Vector2 _vectorFlight;
 
 
@@ -19,6 +20,8 @@ public abstract class SpellBullet : MonoBehaviour
     public float FlightBulletRange => _flightBulletRange;
     public Vector2 VectorFlight => _vectorFlight;
     public Dictionary<ParticleSystem, GameObject> ParticlesBullet => _particlesBullet;
+
+    public GameObject HitEffect => _hitEffect;
 
     private void Update()
     {
