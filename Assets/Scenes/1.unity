@@ -10886,8 +10886,8 @@ MonoBehaviour:
   _player: {fileID: 1118867847}
   _maxHeath: 200
   _spells:
-  - {fileID: 6208341215140126755, guid: b4024ac4b6f00804198fddd611ce1b78, type: 3}
   - {fileID: 6019975008004881243, guid: f984e021876abf145bcf9cfb52eee258, type: 3}
+  - {fileID: 6208341215140126755, guid: b4024ac4b6f00804198fddd611ce1b78, type: 3}
   _shootpoint: {fileID: 1992762436}
   _areaAttack: 7
   _currentEnemyToAttack: {fileID: 0}
