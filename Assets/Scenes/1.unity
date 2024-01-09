@@ -10840,6 +10840,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 2
   _timeSmoothMove: 0.1
+  Animation: {fileID: 95837876954611439}
+  Renderer: {fileID: 212167722126336717}
 --- !u!114 &1118867844
 MonoBehaviour:
   m_ObjectHideFlags: 0

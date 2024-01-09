@@ -65,7 +65,7 @@ public class Player : MonoBehaviour
      
         _currentSpell.CastSpell(_shootpoint);
 
-        
+        _animation.ResetTrigger("Fire");
 
     }
     
@@ -77,6 +77,7 @@ public class Player : MonoBehaviour
         {
             Attack(_currentEnemyToAttack);
             Debug.Log("SHOT");
+            _animation.SetTrigger("Fire");
 
         }
     }
