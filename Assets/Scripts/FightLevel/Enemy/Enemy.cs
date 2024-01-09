@@ -10,9 +10,9 @@ public class Enemy : MonoBehaviour
     [SerializeField] private int _rewardExp;
 
     [SerializeField] private int _rewardResScoore;
-   
-    
 
+
+    private Animator _animation;
     private Player _target;
 
     public int RewardGold => _rewardGold;
@@ -22,7 +22,10 @@ public class Enemy : MonoBehaviour
 
     public event UnityAction<Enemy> Dying;
 
-
+    private void Awake()
+    {
+        _animation = GetComponent<Animator>();
+    }
 
     public void Init(Player target)
     {
@@ -32,12 +35,15 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         _heath -= damage;
+        _animation.SetTrigger("Hit");
 
         if (_heath <= 0)
         {
             Dying?.Invoke(this);
+
+            _animation.SetBool("Dead", true);
             //----------------
-            
+
             //----------------
             Destroy(gameObject);
             GetListEnemys().Remove(null);
