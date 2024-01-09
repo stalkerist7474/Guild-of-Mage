@@ -12,7 +12,7 @@ public class PlayerMove : MonoBehaviour
 
     public Animator Animation;
     public SpriteRenderer Renderer;
-    //public bool FaseRight = true;
+
 
     private Rigidbody2D _rigidbody2D;
     private Vector2 _movementInput;
@@ -50,10 +50,10 @@ public class PlayerMove : MonoBehaviour
         {
             Animation.SetFloat("MoveX", Mathf.Abs(_movementInput.y));
         }
-        //_animation.SetFloat("MoveX", _movementInput.x);
+ 
 
         _rigidbody2D.velocity = _smoothedMovementInput * _speed;
-        //Reflect();
+
         Flip();
     }
 
@@ -76,14 +76,7 @@ public class PlayerMove : MonoBehaviour
         {
             Renderer.flipX = true;
         }
-        //Renderer.flipX = _movementInput.x < 0;
+
     }
-    //private void Reflect()
-    //{
-    //    if((_movementInput.x > 0 && !FaseRight) || (_movementInput.x < 0 && FaseRight))
-    //    {
-    //        transform.localScale *= new Vector2(-1, 1);
-    //        FaseRight = !FaseRight;
-    //    }
-    //}
+
 }

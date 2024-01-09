@@ -22,7 +22,7 @@ public class BuildingStageManagerMine : MonoBehaviour
     {
         _icon = GetComponent<SpriteRenderer>();
         Instance = this;
-        // _stages[0] = GetComponent<Stage>();
+
     }
 
     //метод инициализации текущей стадии здания
@@ -33,14 +33,14 @@ public class BuildingStageManagerMine : MonoBehaviour
         {
             item.Load();
         }
-        // Debug.Log("+++++++");
+
         foreach (var stage in _stages)
         {
             if (stage != null)
             {
                 if (stage._currentStageBool)
                 {
-                    //Debug.Log("+++++++********************");
+
                     _currentStage = stage;
                     _currentStageicon = stage._currentIcon;
                     _aboutBuildingStage = stage._nameStage;
@@ -70,7 +70,7 @@ public class BuildingStageManagerMine : MonoBehaviour
 
     public void TryImproveBuilding()
     {
-        //_currentStage.Load();
+
         Debug.Log("UP0");
         Debug.Log($"_currentStage._needResourcesForNextStage={_currentStage._needResourcesForNextStage.Count}_currentStage._needResourcesForNextStage={_currentStage._needResourcesForNextStage.Keys}");
         Debug.Log($"_stages={_stages.Count}");
@@ -187,7 +187,5 @@ public class BuildingStageManagerMine : MonoBehaviour
 
     }
 
-    //проверка актуальной стадии здания
 
-    //метод для получения текущей стадии здания для других классов
 }

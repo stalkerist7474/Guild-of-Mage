@@ -11,7 +11,7 @@ public class DropItemRes : MonoBehaviour
     public Sprite Icon;
     public int Count;
     public int SellPrice;
-    //public string Rarity;  //{ "Common", "Rare", "Epic", "Legendary" };
+ 
 
     public DropItemRes(int id, string name, string description, TypeRarityItem type, int countItem, int sellPrice)
     {
@@ -19,7 +19,7 @@ public class DropItemRes : MonoBehaviour
         this.Name = name;
         this.Description = description;
         this.Rarity[0] = type;
-        //this.Icon = icon;
+
         this.Count = countItem;
         this.SellPrice = sellPrice;
     }

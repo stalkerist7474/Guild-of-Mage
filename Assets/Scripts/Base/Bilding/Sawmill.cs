@@ -13,10 +13,7 @@ public class Sawmill : MonoBehaviour
     [SerializeField] private ItemRes _targetRes;
     [SerializeField] private CanvasGroup _buildingCanvasGroup; // Канвас здания с управлением
     [SerializeField] private Button _buildingButtonOpen; // Канвас здания с управлением
-    //[SerializeField] private List<float> _delayProduction; //задержка в производстве 
-    //[SerializeField] private int _baseValueProduction; //базовый уровень производства за одно отправление
     [SerializeField] private List<float> _productionMultiply; //коэффициент производства соответствует уровню здания
-                                                              // [SerializeField] private List<TaskBuilding> _listTask; //Список заданий на добычу
     [SerializeField] private GameObject _timer;
     [SerializeField] private TimerUI _timerUI;
     private bool _makeResComplete = false; // Добыча ресурса завершена ли
@@ -134,13 +131,6 @@ public class Sawmill : MonoBehaviour
         OnProductionComplete?.Invoke();
     }
 
-    //private void StartTimer(float time)
-    //{
-    //    var timer = new TimerUI();
-    //    timer = _timer.GetComponent<TimerUI>();
-    //    _timer.GetComponent<CanvasGroup>().alpha = 1;
-    //    _timer.GetComponent<TimerUI>().Start(time);
-    //}
 
     private float time;
     private float _timeLeft = 0f;

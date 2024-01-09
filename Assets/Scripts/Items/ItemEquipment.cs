@@ -9,9 +9,8 @@ public class ItemEquipment : ScriptableObject
     public int ID;
     public string Name;
     public string Description;
-    //public string Rarity;  //{ "Common", "Rare", "Epic", "Legendary" };
+
     [SerializeField] public List<TypeRarityItem> Rarity;
-    //public string EquipmentSlot; //{ "Weapon", "Chest", "Boots", "Hat" };
     [SerializeField] public List<EquipmentSlotType> EquipmentSlot;
     public Sprite Icon;
     public int SellPrice;

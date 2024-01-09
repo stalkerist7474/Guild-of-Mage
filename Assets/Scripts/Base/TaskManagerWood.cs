@@ -12,26 +12,7 @@ public class TaskManagerWood : MonoBehaviour
 
     public event UnityAction OnStartTask;
 
-    //private void OnEnable()
-    //{
-    //    OnStartTask += OnClickTask; //Событие на нажатие кнопки старта любого задания
 
-    //    for (int i = 0; i < _listTask.Count; i++) //проставление слушателя этого евента на все кнопки
-    //    {
-    //        _listTask[i]._button.onClick.AddListener(OnStartTask);
-    //    }
-
-    //}
-
-    //private void OnDisable()
-    //{
-    //    OnStartTask -= OnClickTask;
-    //    for (int i = 0; i < _listTask.Count; i++)
-    //    {
-    //        _listTask[i]._button.onClick.RemoveListener(OnStartTask);
-    //    }
-
-    //}
     private void Awake()
     {
 
@@ -69,7 +50,7 @@ public class TaskManagerWood : MonoBehaviour
                 Debug.Log("3");
             }
         }
-       // OnStartTask?.Invoke();
+
     }
 
     public void TaskComplete()

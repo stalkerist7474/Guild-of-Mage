@@ -107,7 +107,7 @@ public class Player : MonoBehaviour
                 _currentEnemyToAttack = gameObjects[i];
 
              
-                //Debug.Log($"Ближайшая Цель ВЫБРАНА ======{_currentEnemyToAttack.name}");
+
             }
         }
     }

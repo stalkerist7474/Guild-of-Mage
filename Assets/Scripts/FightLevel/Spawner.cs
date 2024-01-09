@@ -52,7 +52,7 @@ public class Spawner : MonoBehaviour
     private void OnDisable()
     {
         AllEnemySpawned -= OnAllEnemySpawned;
-        //OnLevelWin += winLevel.OnWin;
+
     }
 
 
@@ -62,7 +62,7 @@ public class Spawner : MonoBehaviour
         Debug.Log(_nameLevel);
 
         _numWaveOnThisLevel = _waves.Count;
-        //Debug.Log($"_waves.Count{_waves.Count}");
+
         SetWave(_currentWaveNumber);
         _waveComplete = false;
         _waveAllEnemySpawned = false;
@@ -73,8 +73,6 @@ public class Spawner : MonoBehaviour
         _timeAfterLastSpawn += Time.deltaTime;
         _timeAfterLastWaveDone += Time.deltaTime;
 
-       // Debug.Log($"_timeAfterLastWaveDone{_timeAfterLastWaveDone}");
-       // Debug.Log($"_waveAllEnemySpawned={_waveAllEnemySpawned}/ _waveComplete={_waveComplete}");
 
         // Условие если все цели заспавнены и все они убиты
         if (_waveAllEnemySpawned == true)
@@ -186,11 +184,11 @@ public class Spawner : MonoBehaviour
     //Когда победил
     public void Win()
     {
-        Debug.Log($"WINNER1");
+
         CalculatedDrop();
         LevelManager.instance.CompleteLevel(_nameLevel);
         OnLevelWin?.Invoke();
-        Debug.Log($"WINNER2");
+
     }
 
     private void CalculatedDrop()

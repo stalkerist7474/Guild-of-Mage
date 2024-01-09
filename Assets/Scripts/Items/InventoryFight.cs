@@ -29,15 +29,7 @@ public class InventoryFight : MonoBehaviour
     }
     private void Start()
     {
-        //for (int i = 0; i < ItemEquipmentStart.Count; i++)
-        //{
-        //    AddItemEquipment(ItemEquipmentStart[i]);
-        //}
 
-        //for (int i = 0; i < ItemResStart.Count; i++)
-        //{
-        //    AddItemRes(ItemResStart[i]);
-        //}
 
         //обнуляем перед стартом показатели накопленных ресурсов за бой
         for (int i = 0; i < ItemResFightData.Count; i++)
@@ -152,7 +144,7 @@ public class InventoryFight : MonoBehaviour
     public void TrasportItemResToBase(int id, int count)
     {
         InventoryBase.instance.AddItemRes(id , count);
-        //RemoveAllValueItemRes( id, count);
+
         
 
 

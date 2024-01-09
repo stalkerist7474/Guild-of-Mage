@@ -8,7 +8,7 @@ using static UnityEditor.Progress;
 public class InventoryBase : MonoBehaviour
 {
     public static InventoryBase instance;
-    //public static InventoryBase singleton { get; set; }
+
     //стартовые вещи
     [SerializeField] List <ItemEquipment> ItemEquipmentStart = new List <ItemEquipment> ();
     [SerializeField] List <ItemRes> ItemResStart = new List <ItemRes> ();
@@ -19,25 +19,12 @@ public class InventoryBase : MonoBehaviour
 
     [SerializeField] ItemRes _moneyTemplate;
 
-    //public int BalanceBase;
+
     private bool _itemResFound = false;
     private int _idMoney = 0;
 
     //словарь доступных ресурсов
     public Dictionary<int, int> ResourcesOnBase = new Dictionary<int, int>();
-
-
-    private void OnEnable()
-    {
-
-        // InventoryFight.instance.OnBaseResourcesChange += OnCountingItemRes;
-    }
-
-    private void OnDisable()
-    {
-       // InventoryFight.instance.OnBaseResourcesChange -= OnCountingItemRes; ;
-    }
-
 
 
     private void Awake()
@@ -146,24 +133,5 @@ public class InventoryBase : MonoBehaviour
         }
     }
 
-    //private void OnCountingItemRes()
-    //{
-    //    int currentItemID = 0;
-    //    Debug.Log("Trandfer");
-    //    foreach (var item in ItemResBase)
-    //    {
-    //        currentItemID = item.ID;
-    //        if (ResourcesOnBase.ContainsKey(currentItemID))
-    //        {
-    //            ResourcesOnBase[currentItemID] += item.Count;
-    //            currentItemID = 0;
-    //        }
-    //        else
-    //        {
-    //            ResourcesOnBase.Add(currentItemID, item.Count);
-    //            currentItemID = 0;
-    //        }
-    //    }
-    //    //ItemResBase.Clear();
-    //}
+ 
 }

@@ -15,18 +15,7 @@ public class ItemRes : ScriptableObject
     [SerializeField] public int SellPrice;
     [SerializeField] public int ScoorePrice;
 
-    //public string Rarity;  //{ "Common", "Rare", "Epic", "Legendary" };
 
-    //public ItemRes(int id, string name, string description, TypeRarityItem type,  int countItem, int sellPrice)
-    //{
-    //    this.ID = id;
-    //    this.Name = name;
-    //    this.Description = description;
-    //    this.Rarity[0] = type;
-    //    //this.Icon = icon;
-    //    this.Count = countItem;
-    //    this.SellPrice = sellPrice;
-    //}
 
     private void OnValidate()
     {

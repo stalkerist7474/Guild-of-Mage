@@ -27,14 +27,7 @@ public class Stage : MonoBehaviour
 
     private void Start()
     {
-        //Load();
-        //Debug.Log("11");
-        //Debug.Log(_needResourcesForNextStage.Count);
-        //foreach (var item in _needResourcesForNextStage)
-        //{
-        //    Debug.Log("11");
-        //    Debug.Log($"item={item.Value}");
-        //}
+
     }
 
     //Настройка для отображение словаря в инспекторе и подгрузка данных из Скриптапл обж
@@ -47,7 +40,7 @@ public class Stage : MonoBehaviour
 
             for (int i = 0; i < _dictionaryData.KeysIdItem.Count; i++)
             {
-                //Debug.Log($"OnBeforeSerialize={_dictionaryData.KeysIdItem[i]}/{_dictionaryData.ValueCountItem[i]}");
+
 
                 _keysIdItem.Add(_dictionaryData.KeysIdItem[i]);
                 _valueCountItem.Add(_dictionaryData.ValueCountItem[i]);
@@ -57,33 +50,6 @@ public class Stage : MonoBehaviour
             }
         }
     }
-
-    //public void OnAfterDeserialize()
-    //{
-        
-    //}
-
-    //public void DeserializeDictionary()
-    //{
-    //    Debug.Log("DESERIALIZE");
-    //   // _needResourcesForNextStage = new Dictionary<int, int>();
-    //    _dictionaryData.KeysIdItem.Clear ();
-    //    _dictionaryData.ValueCountItem.Clear ();
-
-    //    for (int i = 0; i < Mathf.Min(_keysIdItem.Count, _valueCountItem.Count); i++)
-    //    {
-    //        Debug.Log($"DeserializeDictionary={_dictionaryData.KeysIdItem[i]}/{_dictionaryData.ValueCountItem[i]}");
-    //        _dictionaryData.KeysIdItem.Add(_keysIdItem[i]);
-    //        _dictionaryData.ValueCountItem.Add(_valueCountItem[i]);
-    //        _needResourcesForNextStage.Add(_keysIdItem[i], _valueCountItem[i]);
-    //    }
-    //    modifyValues = false;
-
-    //}
-
-
-
-
 
 
 

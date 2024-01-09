@@ -45,16 +45,6 @@ public class LevelManager : MonoBehaviour
 
 
 
-
-
-
-
-
-
-
-
-
-
     public void CompleteLevel(string currentLevel)
     {
         int numLevel = int.Parse(currentLevel) + 1;

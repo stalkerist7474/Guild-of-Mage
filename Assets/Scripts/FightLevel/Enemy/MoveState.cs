@@ -37,6 +37,6 @@ public class MoveState : State
         {
             _renderer.flipX = true;
         }
-        //Renderer.flipX = _movementInput.x < 0;
+
     }
 }

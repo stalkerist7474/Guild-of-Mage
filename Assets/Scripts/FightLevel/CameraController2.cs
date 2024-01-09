@@ -31,8 +31,7 @@ public class CameraController2 : MonoBehaviour
         if (_gizmozShowLimit)
         {
             Gizmos.color = Color.red;
-            //Gizmos.DrawSphere(new Vector3(_minPosition.x - 9, _minPosition.y - 5, -5), 2);
-            //Gizmos.DrawSphere(new Vector3(_maxPosition.x + 9, _minPosition.y-5), 1);
+
             Gizmos.DrawLine(new Vector2(_maxPosition.x+9, _maxPosition.y + 5), new Vector2(_minPosition.x - 9, _maxPosition.y + 5)); //вверх
             Gizmos.DrawLine(new Vector2(_minPosition.x - 9, _minPosition.y - 5), new Vector2(_maxPosition.x + 9, _minPosition.y - 5)); //низ
 
