@@ -45,9 +45,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _label: "\u0428\u0430\u0440\u043E\u0432\u0430\u044F \u043C\u043E\u043B\u043D\u0438\u044F"
-  _price: 50
+  _price: 3
   _cooldown: 5
   _icon: {fileID: 0}
-  _isBuyed: 1
+  _isBuyed: 0
+  _isActive: 0
   SpellBullet: {fileID: 4065466815620403394, guid: c5b9d9d5c145c624fb0c1ec651c379ed,
     type: 3}

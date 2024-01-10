@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UIElements;
@@ -11,7 +12,6 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private Player _player;
     [SerializeField] private int _maxHeath;
-    [SerializeField] private List<Spell> _spells;
     [SerializeField] private Transform _shootpoint;
     [SerializeField] private float _areaAttack;
     [SerializeField] private GameObject _currentEnemyToAttack;
@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
     private int _currentHeath;
     private Animator _animation;
     private Spell _currentSpell;
+    //private List<Spell> _spells;
 
     public event UnityAction<int, int> HealthChanged;
     public event UnityAction<int> MoneyChanged;
@@ -46,10 +47,10 @@ public class Player : MonoBehaviour
         _player = GetComponent<Player>();
         _animation = GetComponent<Animator>();
         _currentHeath = _maxHeath;
-        _currentSpell = _spells[0];
+        ChangeWeapon();
         ExpChanged?.Invoke(Exp, _needExpForUp); // для правильного отображение опыта в начале уровня
-
-
+        //_spells = new List<Spell>();
+        ////_spells = SpellManager.instance.GetSpell();
     }
     private void Update()
     {
@@ -66,6 +67,22 @@ public class Player : MonoBehaviour
         _currentSpell.CastSpell(_shootpoint);
 
         _animation.ResetTrigger("Fire");
+
+    }
+
+    public void ChangeWeapon()
+    {
+
+        //foreach (var spell in _spells)
+        //{
+        //    if ((spell.IsBuyed) && (spell.IsActive))
+        //    {
+        //        _currentSpell = spell;
+        //    }
+        //}
+
+        _currentSpell = SpellManager.instance.GetSpell();
+
 
     }
     
@@ -179,6 +196,9 @@ public class Player : MonoBehaviour
         }
 
     }
+
+   
+
     //лечение персонажа = надо убрать баг с тем что можно похилиться выше максимального уровня здоровья
     public void AddHitPoints(int hitpoints)
     {

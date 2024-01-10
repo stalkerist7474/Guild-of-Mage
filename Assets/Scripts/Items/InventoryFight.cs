@@ -153,6 +153,7 @@ public class InventoryFight : MonoBehaviour
     // перебор всех предметов Res и отправка их на базу
     public void TrasportAllItemResToBase()
     {
+        InventoryBase.instance.AddCountPerk(_player.CountPerks);
 
         for (int i = 0; i < TypeDropItemResFightOnThisLevel.Count; i++)
         {

@@ -183,6 +183,6 @@ MonoBehaviour:
   _label: Fireball
   _damage: 40
   _speed: 5
-  _flightBulletRange: 5
+  _flightBulletRange: 1
   _hitEffect: {fileID: 3480376897911090875, guid: 5aeb00a6640ede14e98ebb9ceccf21ad,
     type: 3}

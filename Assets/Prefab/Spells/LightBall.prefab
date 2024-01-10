@@ -158,6 +158,6 @@ MonoBehaviour:
   _label: "\u0428\u0430\u0440\u043E\u0432\u0430\u044F \u043C\u043E\u043B\u043D\u0438\u044F"
   _damage: 50
   _speed: 6
-  _flightBulletRange: 6
+  _flightBulletRange: 1
   _hitEffect: {fileID: 6793816857571416081, guid: a6c0edbfe9ed7444c89842c0b9e89025,
     type: 3}

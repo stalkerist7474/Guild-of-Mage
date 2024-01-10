@@ -1,14 +1,12 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class ResBalanceTest : MonoBehaviour
+public class PerkCountTest : MonoBehaviour
 {
     [SerializeField] private TMP_Text _Text;
-
-    [SerializeField] private ItemRes _res;
+    [SerializeField] private InventoryBase _base;
 
 
 
@@ -16,6 +14,6 @@ public class ResBalanceTest : MonoBehaviour
     {
         //Yтом переделать под события
 
-        _Text.text = _res.Count.ToString();
+        _Text.text = _base.CountPerks.ToString();
     }
 }

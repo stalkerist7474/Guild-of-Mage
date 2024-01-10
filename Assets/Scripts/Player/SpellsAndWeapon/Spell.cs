@@ -11,6 +11,7 @@ public abstract class Spell : MonoBehaviour
     [SerializeField] private float _cooldown;
     [SerializeField] private Sprite _icon;
     [SerializeField] private bool _isBuyed = false;
+    [SerializeField] private bool _isActive = false;
     [SerializeField] private Dictionary<ParticleSystem, GameObject> _particles;
     [SerializeField] protected SpellBullet SpellBullet;
 
@@ -21,6 +22,8 @@ public abstract class Spell : MonoBehaviour
     public float Cooldown => _cooldown ;
     public Sprite Icon => _icon;
     public bool IsBuyed => _isBuyed;
+    public bool IsActive => _isActive;
+
     public Dictionary<ParticleSystem, GameObject> Particles=> _particles;
     public abstract void CastSpell(Transform shootPoint);
     public abstract void StartCooldown();
@@ -39,5 +42,15 @@ public abstract class Spell : MonoBehaviour
     {
         _isBuyed = true;
     }
-         
+
+    public void Activate()
+    {
+        _isActive = true;
+    }
+
+    public void Deactivate()
+    {
+        _isActive = false;
+    }
+
 }

@@ -19,6 +19,7 @@ public class InventoryBase : MonoBehaviour
 
     [SerializeField] ItemRes _moneyTemplate;
 
+    public int CountPerks { get; private set; }
 
     private bool _itemResFound = false;
     private int _idMoney = 0;
@@ -45,6 +46,20 @@ public class InventoryBase : MonoBehaviour
 
     private void Start()
     {
+        CountPerks += 5;
+    }
+    public void AddCountPerk(int count)
+    {
+        CountPerks += count;
+    }
+    public int GetCountPerk()
+    {
+        return CountPerks;
+    }
+
+    public void DecreasePerkPoint(int count)
+    {
+        CountPerks -= count;
     }
 
 
