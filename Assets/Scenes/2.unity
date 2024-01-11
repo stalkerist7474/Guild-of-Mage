@@ -940,7 +940,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.827, y: 14.621, z: -0.23}
-  m_LocalScale: {x: 1.7378, y: 1.1241, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 304119409}
@@ -11238,8 +11238,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 1118867847}
   _maxHeath: 200
-  _spells:
-  - {fileID: 6208341215140126755, guid: b4024ac4b6f00804198fddd611ce1b78, type: 3}
   _shootpoint: {fileID: 1992762436}
   _areaAttack: 5
   _currentEnemyToAttack: {fileID: 0}
