@@ -33,6 +33,7 @@ public class BuildingStageManagerSawmill : MonoBehaviour
 
     private void Start()
     {
+
         foreach (var item in _stages)
         {
             item.Load();
@@ -56,6 +57,7 @@ public class BuildingStageManagerSawmill : MonoBehaviour
                 }
             }
         }
+        LoadStage();
     }
 
     private void GetIndexStage()
@@ -70,8 +72,33 @@ public class BuildingStageManagerSawmill : MonoBehaviour
     }
 
 
-    //метод улучшения здания
 
+    //метод загрузки стадии из сохранения
+
+    private void LoadStage()
+    {
+        Debug.Log("Load1");
+        _currentStageId = PlayerPrefs.GetInt("Sawmill_stageID");
+
+        _currentStage = _stages[_currentStageId];
+
+        _currentStageicon = _currentStage._currentIcon; //обновляем картинку
+        _icon.sprite = _currentStageicon;
+        _aboutBuildingStage = _currentStage._nameStage; //обновляем описание стадии здания
+        Debug.Log("Load2");
+        GetIndexStage();
+    }
+    //метод сохранения стадии из сохранения
+
+    public void SaveStage()
+    {
+        Debug.Log("save1");
+        PlayerPrefs.SetInt("Sawmill_stageID", _currentStageId);
+        Debug.Log("saveOK");
+    }
+
+    //метод улучшения здания
+    
     public void TryImproveBuilding()
     {
 
@@ -96,6 +123,7 @@ public class BuildingStageManagerSawmill : MonoBehaviour
             _aboutBuildingStage = _currentStage._nameStage; //обновляем описание стадии здания
 
             GetIndexStage();
+            SaveStage();
 
             Debug.Log("UP2");
         }

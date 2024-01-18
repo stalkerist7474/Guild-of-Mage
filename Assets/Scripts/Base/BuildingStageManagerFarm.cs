@@ -52,6 +52,7 @@ public class BuildingStageManagerFarm : MonoBehaviour
                 }
             }
         }
+        LoadStage();
     }
 
     private void GetIndexStage()
@@ -65,6 +66,29 @@ public class BuildingStageManagerFarm : MonoBehaviour
         }
     }
 
+    //метод загрузки стадии из сохранения
+
+    private void LoadStage()
+    {
+        Debug.Log("Load1");
+        _currentStageId = PlayerPrefs.GetInt("Farm_stageID");
+
+        _currentStage = _stages[_currentStageId];
+
+        _currentStageicon = _currentStage._currentIcon; //обновляем картинку
+        _icon.sprite = _currentStageicon;
+        _aboutBuildingStage = _currentStage._nameStage; //обновляем описание стадии здания
+        Debug.Log("Load2");
+        GetIndexStage();
+    }
+    //метод сохранения стадии из сохранения
+
+    public void SaveStage()
+    {
+        Debug.Log("save1");
+        PlayerPrefs.SetInt("Farm_stageID", _currentStageId);
+        Debug.Log("saveOK");
+    }
 
     //метод улучшения здания
 
@@ -92,6 +116,7 @@ public class BuildingStageManagerFarm : MonoBehaviour
             _aboutBuildingStage = _currentStage._nameStage; //обновляем описание стадии здания
 
             GetIndexStage();
+            SaveStage();
 
             Debug.Log("UP2");
         }
